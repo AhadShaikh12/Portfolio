@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahad Shaikh | Cyber Security</title>
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- PRELOADER -->
+    <div class="preloader">
+        <div class="cyber-loader">
+            <div class="loader-ring"></div>
+            <div class="loader-text">[SYSTEM INIT]</div>
+        </div>
+    </div>
+
+    <!-- SCAN LINES OVERLAY -->
+    <div class="scan-lines"></div>
+    
+    <!-- CRT EFFECT -->
+    <div class="crt-effect"></div>
+
+    <!-- SCROLL TOP BUTTON -->
+    <button class="scroll-top" id="scrollTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- NAME ANIMATION OVERLAY - RUNS ONCE -->
+    <div class="name-animation" id="nameAnimation">
+        <div class="name-container">
+            <span class="name-part">A</span>
+            <span class="name-part">h</span>
+            <span class="name-part">a</span>
+            <span class="name-part">d</span>
+            <span class="name-part">&nbsp;</span>
+            <span class="name-part">S</span>
+            <span class="name-part">h</span>
+            <span class="name-part">a</span>
+            <span class="name-part">i</span>
+            <span class="name-part">k</span>
+            <span class="name-part">h</span>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="cyber-nav" id="navbar">
+        <div class="nav-container">
+            <div class="nav-menu" id="navMenu">
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link active">[HOME]</a></li>
+                    <li><a href="#about" class="nav-link">[ABOUT]</a></li>
+                    <li><a href="#matrix" class="nav-link">[MATRIX]</a></li>
+                    <li><a href="#tech-skills" class="nav-link">[TECH SKILLS]</a></li>
+                    <li><a href="#certifications" class="nav-link">[CERTS]</a></li>
+                    <li><a href="#badge" class="nav-link">[THM]</a></li>
+                    <li><a href="#connect" class="nav-link">[CONNECT]</a></li>
+                </ul>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="section hero-section">
+        <div class="grid-background"></div>
+        <div class="floating-particles"></div>
+        
+        <div class="hero-container">
+            <h1 class="hero-title">AHAD SHAIKH</h1>
+            <div class="hero-subtitle">
+                <span class="bracket">[</span> CYBERSECURITY ENTHUSIAST <span class="bracket">]</span>
+            </div>
+            
+            <p class="hero-desc">Currently focusing on Cybersecurity, ethical hacking, networking fundamentals, and real-world security concepts. My goal is to build a strong career in Cybersecurity through continuous learning and hands-on practice.</p>
+            
+            <div class="hero-buttons">
+                <a href="assets/resume/Ahad_Resume.pdf" class="cyber-button primary" download>
+                    <i class="fas fa-download"></i> DOWNLOAD RESUME
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION - PROFILE CARD -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">[ PROFILE ]</h2>
+                <div class="header-line"></div>
+            </div>
+            
+            <div class="profile-card">
+                <div class="profile-info">
+                    <div class="info-row">
+                        <span class="info-label">NAME</span>
+                        <span class="info-value">Ahad Shaikh</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">DEGREE</span>
+                        <span class="info-value">BCA (Cybersecurity)</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">UNIVERSITY</span>
+                        <span class="info-value">Somaiya Vidyavihar University</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">GOAL</span>
+                        <span class="info-value">Building a career in Cybersecurity</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">INTERESTS</span>
+                        <span class="info-value">Ethical Hacking, Network Security, Digital Forensics, Bug Bounty</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILL MATRIX SECTION - RADAR CHART ONLY -->
+    <section id="matrix" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">[ SKILL MATRIX ]</h2>
+                <div class="header-line"></div>
+            </div>
+            
+            <div class="matrix-card">
+                <div class="matrix-header">
+                    <span class="matrix-title">LEARNING FOCUS AREAS</span>
+                    <span class="matrix-badge">ANALYSIS</span>
+                </div>
+                
+                <div class="matrix-content">
+                    <div class="radar-container" id="radarContainer">
+                        <svg class="radar-svg" viewBox="0 0 400 400" id="radarChart">
+                            <!-- Background grid will be drawn by JS -->
+                        </svg>
+                    </div>
+                    
+                    <div class="matrix-description">
+                        <p class="matrix-text">This matrix represents my learning focus areas in cybersecurity. Each domain reflects my current study priorities and hands-on practice efforts.</p>
+                        <div class="category-list">
+                            <span class="category-tag">SecOps</span>
+                            <span class="category-tag">Incident Response</span>
+                            <span class="category-tag">Malware Analysis</span>
+                            <span class="category-tag">Pen Testing</span>
+                            <span class="category-tag">Exploitation</span>
+                            <span class="category-tag">Red Teaming</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TECHNICAL SKILLS SECTION - WITH SEGMENTED BARS -->
+    <section id="tech-skills" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">[ TECHNICAL SKILLS ]</h2>
+                <div class="header-line"></div>
+            </div>
+            
+            <div class="skills-categories">
+                <!-- Programming & Web Development -->
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-code"></i>
+                        Programming & Web Development
+                    </h3>
+                    <div class="skill-items">
+                        <div class="skill-item" data-skill="HTML" data-percent="50">
+                            <div class="skill-info">
+                                <span class="skill-name">HTML</span>
+                                <span class="skill-percent">50%</span>
+                            </div>
+                            <div class="segmented-bar">
+                                <div class="segment-fill" style="width: 50%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="CSS" data-percent="25">
+                            <div class="skill-info">
+                                <span class="skill-name">CSS</span>
+                                <span class="skill-percent">25%</span>
+                            </div>
+                            <div class="segmented-bar">
+                                <div class="segment-fill" style="width: 25%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="JavaScript" data-percent="25">
+                            <div class="skill-info">
+                                <span class="skill-name">JavaScript</span>
+                                <span class="skill-percent">25%</span>
+                            </div>
+                            <div class="segmented-bar">
+                                <div class="segment-fill" style="width: 25%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="Python" data-percent="50">
+                            <div class="skill-info">
+                                <span class="skill-name">Python</span>
+                                <span class="skill-percent">50%</span>
+                            </div>
+                            <div class="segmented-bar">
+                                <div class="segment-fill" style="width: 50%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="SQL" data-percent="50">
+                            <div class="skill-info">
+                                <span class="skill-name">SQL</span>
+                                <span class="skill-percent">50%</span>
+                            </div>
+                            <div class="segmented-bar">
+                                <div class="segment-fill" style="width: 50%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Cybersecurity Tools -->
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-shield-alt"></i>
+                        Cybersecurity Tools
+                    </h3>
+                    <div class="skill-items">
+                        <div class="skill-item" data-skill="Kali Linux" data-percent="20">
+                            <div class="skill-info">
+                                <span class="skill-name">Kali Linux</span>
+                                <span class="skill-percent">20%</span>
+                            </div>
+                            <div class="segmented-bar">
+                                <div class="segment-fill" style="width: 20%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="Wireshark" data-percent="20">
+                            <div class="skill-info">
+                                <span class="skill-name">Wireshark</span>
+                                <span class="skill-percent">20%</span>
+                            </div>
+                            <div class="segmented-bar">
+                                <div class="segment-fill" style="width: 20%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="Burp Suite" data-percent="20">
+                            <div class="skill-info">
+                                <span class="skill-name">Burp Suite</span>
+                                <span class="skill-percent">20%</span>
+                            </div>
+                            <div class="segmented-bar">
+                                <div class="segment-fill" style="width: 20%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="Nmap" data-percent="25">
+                            <div class="skill-info">
+                                <span class="skill-name">Nmap</span>
+                                <span class="skill-percent">25%</span>
+                            </div>
+                            <div class="segmented-bar">
+                                <div class="segment-fill" style="width: 25%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Development Tools -->
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-tools"></i>
+                        Development Tools
+                    </h3>
+                    <div class="skill-items">
+                        <div class="skill-item" data-skill="Git & GitHub" data-percent="50">
+                            <div class="skill-info">
+                                <span class="skill-name">Git & GitHub</span>
+                                <span class="skill-percent">50%</span>
+                            </div>
+                            <div class="segmented-bar">
+                                <div class="segment-fill" style="width: 50%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="VS Code" data-percent="25">
+                            <div class="skill-info">
+                                <span class="skill-name">VS Code</span>
+                                <span class="skill-percent">25%</span>
+                            </div>
+                            <div class="segmented-bar">
+                                <div class="segment-fill" style="width: 25%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="Linux Commands" data-percent="25">
+                            <div class="skill-info">
+                                <span class="skill-name">Linux Commands</span>
+                                <span class="skill-percent">25%</span>
+                            </div>
+                            <div class="segmented-bar">
+                                <div class="segment-fill" style="width: 25%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CERTIFICATIONS SECTION -->
+    <section id="certifications" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">[ CERTIFICATIONS ]</h2>
+                <div class="header-line"></div>
+            </div>
+            
+            <div class="certs-grid">
+                <!-- Pre Security - TryHackMe -->
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h3>Pre Security</h3>
+                        <p class="cert-platform">TryHackMe</p>
+                        <a href="#" class="verify-btn" target="_blank">
+                            <i class="fas fa-check-circle"></i> VERIFY
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Cybersecurity 101 - TryHackMe -->
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-skull"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h3>Cybersecurity 101</h3>
+                        <p class="cert-platform">TryHackMe</p>
+                        <a href="#" class="verify-btn" target="_blank">
+                            <i class="fas fa-check-circle"></i> VERIFY
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Ethical Hacking with Kali Linux - IBM/Coursera -->
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fab fa-linux"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h3>Ethical Hacking with Kali Linux</h3>
+                        <p class="cert-platform">IBM · Coursera</p>
+                        <a href="https://www.coursera.org/account/accomplishments/verify/OQ3XLPTZQCGZ" target="_blank" class="verify-btn">
+                            <i class="fas fa-check-circle"></i> VERIFY
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Networking - NVIDIA/Coursera -->
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h3>Networking Fundamentals</h3>
+                        <p class="cert-platform">NVIDIA · Coursera</p>
+                        <a href="https://www.coursera.org/account/accomplishments/verify/M9HGTKY7RSUU" target="_blank" class="verify-btn">
+                            <i class="fas fa-check-circle"></i> VERIFY
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRYHACKME BADGE SECTION - FIXED SIZE CONTAINER -->
+    <section id="badge" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">[ TRYHACKME BADGE ]</h2>
+                <div class="header-line"></div>
+            </div>
+            
+            <div class="badge-card">
+                <div class="badge-header">
+                    <i class="fas fa-shield-hal tryhackme-icon"></i>
+                    <span class="badge-title">TRYHACKME PROFILE</span>
+                    <span class="badge-subtitle">Auto-updates when rooms are completed</span>
+                </div>
+                
+                <div class="badge-iframe-container">
+                    <iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=4949717" style="border:none;" title="TryHackMe Badges" scrolling="no"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONNECT SECTION - SINGLE CARD -->
+    <section id="connect" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">[ CONNECT ]</h2>
+                <div class="header-line"></div>
+            </div>
+            
+            <div class="connect-card">
+                <div class="connect-header">
+                    <i class="fas fa-terminal"></i>
+                    <span>ahad@connect:~$</span>
+                </div>
+                
+                <div class="connect-links">
+                    <a href="mailto:ahad.shaikh@somaiya.edu" class="connect-link">
+                        <i class="fas fa-envelope"></i>
+                        <span>ahad.shaikh@somaiya.edu</span>
+                    </a>
+                    
+                    <a href="https://www.linkedin.com/in/ahad-shaikh-747625279/" target="_blank" class="connect-link">
+                        <i class="fab fa-linkedin"></i>
+                        <span>linkedin.com/in/ahad-shaikh</span>
+                    </a>
+                    
+                    <a href="https://github.com/AhadShaikh12" target="_blank" class="connect-link">
+                        <i class="fab fa-github"></i>
+                        <span>github.com/AhadShaikh12</span>
+                    </a>
+                    
+                    <a href="https://tryhackme.com/p/AhadShk" target="_blank" class="connect-link">
+                        <i class="fas fa-shield-hal"></i>
+                        <span>tryhackme.com/p/AhadShk</span>
+                    </a>
+                </div>
+                
+                <div class="connect-footer">
+                    <span class="encryption">● SECURE CONNECTION</span>
+                    <span class="connection-id">AES-256</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="social-icons">
+                <a href="https://github.com/AhadShaikh12" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/ahad-shaikh-747625279/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://tryhackme.com/p/AhadShk" target="_blank"><i class="fas fa-shield-hal"></i></a>
+            </div>
+            <div class="copyright">
+                © 2025 Ahad Shaikh. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
