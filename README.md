@@ -14,11 +14,10 @@ It showcases my skills, certifications, and cybersecurity learning journey.
 - CSS  
 - JavaScript  
 
-## 🌐 Live Demo
-(Coming Soon)
 
 ## 📬 Contact
 - Email: ahad.shaikh@somaiya.edu  
 - LinkedIn: https://www.linkedin.com/in/ahad-shaikh-747625279/  
 - GitHub: https://github.com/AhadShaikh12  
 - TryHackMe: https://tryhackme.com/p/AhadShk
+
