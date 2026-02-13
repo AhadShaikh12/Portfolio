@@ -413,14 +413,7 @@ html {
     transform: translateY(-2px);
 }
 
-.hero-stats {
-    display: flex;
-    gap: 2rem;
-    margin-top: 3rem;
-    padding: 1rem;
-    border: 1px solid rgba(0, 255, 157, 0.3);
-    max-width: 400px;
-}
+
 
 .hero-stats .stat-item {
     text-align: center;
