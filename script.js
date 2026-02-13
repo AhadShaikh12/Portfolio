@@ -1,20 +1,15 @@
 // script.js
 document.addEventListener('DOMContentLoaded', function() {
-    // Preloader
+    // Preloader with name animation
+    const preloader = document.getElementById('preloader');
+    
+    // Hide preloader after animation completes
     setTimeout(() => {
-        document.querySelector('.preloader').style.opacity = '0';
+        preloader.style.opacity = '0';
         setTimeout(() => {
-            document.querySelector('.preloader').style.display = 'none';
+            preloader.style.display = 'none';
         }, 800);
-    }, 2000);
-
-    // Name animation - runs once
-    const nameAnimation = document.getElementById('nameAnimation');
-    setTimeout(() => {
-        if (nameAnimation) {
-            nameAnimation.style.display = 'none';
-        }
-    }, 4000);
+    }, 3500); // Wait for name animation and progress bar to complete
 
     // Navbar shrink effect
     const navbar = document.getElementById('navbar');
@@ -273,4 +268,12 @@ document.addEventListener('DOMContentLoaded', function() {
         item.style.transition = 'all 0.5s';
         skillObserver.observe(item);
     });
+
+    // Ensure iframe loads properly
+    const iframe = document.querySelector('.badge-iframe-container iframe');
+    if (iframe) {
+        iframe.onload = function() {
+            console.log('TryHackMe iframe loaded successfully');
+        };
+    }
 });

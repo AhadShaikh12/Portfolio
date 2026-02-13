@@ -10,11 +10,27 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- PRELOADER -->
-    <div class="preloader">
+    <!-- PRELOADER WITH NAME ANIMATION -->
+    <div class="preloader" id="preloader">
         <div class="cyber-loader">
-            <div class="loader-ring"></div>
-            <div class="loader-text">[SYSTEM INIT]</div>
+            <div class="name-animation">
+                <span class="name-part">A</span>
+                <span class="name-part">h</span>
+                <span class="name-part">a</span>
+                <span class="name-part">d</span>
+                <span class="name-part">&nbsp;</span>
+                <span class="name-part">S</span>
+                <span class="name-part">h</span>
+                <span class="name-part">a</span>
+                <span class="name-part">i</span>
+                <span class="name-part">k</span>
+                <span class="name-part">h</span>
+            </div>
+            <div class="loader-text">[ SYSTEM BOOT ]</div>
+            <div class="loader-progress">
+                <div class="progress-bar"></div>
+            </div>
+            <div class="loader-status">> ACCESS GRANTED_</div>
         </div>
     </div>
 
@@ -28,23 +44,6 @@
     <button class="scroll-top" id="scrollTop">
         <i class="fas fa-chevron-up"></i>
     </button>
-
-    <!-- NAME ANIMATION OVERLAY - RUNS ONCE -->
-    <div class="name-animation" id="nameAnimation">
-        <div class="name-container">
-            <span class="name-part">A</span>
-            <span class="name-part">h</span>
-            <span class="name-part">a</span>
-            <span class="name-part">d</span>
-            <span class="name-part">&nbsp;</span>
-            <span class="name-part">S</span>
-            <span class="name-part">h</span>
-            <span class="name-part">a</span>
-            <span class="name-part">i</span>
-            <span class="name-part">k</span>
-            <span class="name-part">h</span>
-        </div>
-    </div>
 
     <!-- NAVBAR -->
     <nav class="cyber-nav" id="navbar">
@@ -72,6 +71,7 @@
         <div class="floating-particles"></div>
         
         <div class="hero-container">
+            <div class="hero-terminal-line">> SYSTEM_STATUS: ONLINE_</div>
             <h1 class="hero-title">AHAD SHAIKH</h1>
             <div class="hero-subtitle">
                 <span class="bracket">[</span> CYBERSECURITY ENTHUSIAST <span class="bracket">]</span>
@@ -84,6 +84,21 @@
                     <i class="fas fa-download"></i> DOWNLOAD RESUME
                 </a>
             </div>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-label">> UPTIME</span>
+                    <span class="stat-value">14d 6h 23m</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">> SESSIONS</span>
+                    <span class="stat-value">247</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">> SEC_LEVEL</span>
+                    <span class="stat-value">L3</span>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -93,6 +108,7 @@
             <div class="section-header">
                 <h2 class="section-title">[ PROFILE ]</h2>
                 <div class="header-line"></div>
+                <div class="section-subtitle">> user_info.dat --details</div>
             </div>
             
             <div class="profile-card">
@@ -118,6 +134,10 @@
                         <span class="info-value">Ethical Hacking, Network Security, Digital Forensics, Bug Bounty</span>
                     </div>
                 </div>
+                <div class="profile-terminal">
+                    <span class="terminal-text">> profile.load() --success</span>
+                    <span class="terminal-text">> user.auth: authenticated</span>
+                </div>
             </div>
         </div>
     </section>
@@ -128,12 +148,13 @@
             <div class="section-header">
                 <h2 class="section-title">[ SKILL MATRIX ]</h2>
                 <div class="header-line"></div>
+                <div class="section-subtitle">> analyzing_capabilities.exe</div>
             </div>
             
             <div class="matrix-card">
                 <div class="matrix-header">
                     <span class="matrix-title">LEARNING FOCUS AREAS</span>
-                    <span class="matrix-badge">ANALYSIS</span>
+                    <span class="matrix-badge">ANALYSIS v2.1</span>
                 </div>
                 
                 <div class="matrix-content">
@@ -153,6 +174,10 @@
                             <span class="category-tag">Exploitation</span>
                             <span class="category-tag">Red Teaming</span>
                         </div>
+                        <div class="matrix-stats">
+                            <div class="stat">> ACTIVE_NODES: 6</div>
+                            <div class="stat">> SCAN_DEPTH: 85%</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -165,6 +190,7 @@
             <div class="section-header">
                 <h2 class="section-title">[ TECHNICAL SKILLS ]</h2>
                 <div class="header-line"></div>
+                <div class="section-subtitle">> system_metrics --display</div>
             </div>
             
             <div class="skills-categories">
@@ -267,6 +293,7 @@
                             </div>
                         </div>
                     </div>
+                    <div class="category-footer">> active_tools: 4 | updates_available: 0</div>
                 </div>
                 
                 <!-- Development Tools -->
@@ -315,6 +342,7 @@
             <div class="section-header">
                 <h2 class="section-title">[ CERTIFICATIONS ]</h2>
                 <div class="header-line"></div>
+                <div class="section-subtitle">> verified_credentials --list</div>
             </div>
             
             <div class="certs-grid">
@@ -374,15 +402,17 @@
                     </div>
                 </div>
             </div>
+            <div class="certs-footer">> total_credentials: 4 | last_updated: 2025-02-13</div>
         </div>
     </section>
 
-    <!-- TRYHACKME BADGE SECTION - FIXED SIZE CONTAINER -->
+    <!-- TRYHACKME BADGE SECTION - FIXED CONTAINER -->
     <section id="badge" class="section">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">[ TRYHACKME BADGE ]</h2>
                 <div class="header-line"></div>
+                <div class="section-subtitle">> fetching_live_data --thm-profile</div>
             </div>
             
             <div class="badge-card">
@@ -392,8 +422,15 @@
                     <span class="badge-subtitle">Auto-updates when rooms are completed</span>
                 </div>
                 
-                <div class="badge-iframe-container">
-                    <iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=4949717" style="border:none;" title="TryHackMe Badges" scrolling="no"></iframe>
+                <div class="badge-iframe-wrapper">
+                    <div class="badge-iframe-container">
+                        <iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=4949717" style="border:none;" title="TryHackMe Badges" scrolling="no" frameborder="0"></iframe>
+                    </div>
+                </div>
+                
+                <div class="badge-footer">
+                    <span class="badge-status">> STATUS: LIVE</span>
+                    <span class="badge-update">> LAST_SYNC: 2025-02-13</span>
                 </div>
             </div>
         </div>
@@ -405,6 +442,7 @@
             <div class="section-header">
                 <h2 class="section-title">[ CONNECT ]</h2>
                 <div class="header-line"></div>
+                <div class="section-subtitle">> establishing_secure_channel</div>
             </div>
             
             <div class="connect-card">
@@ -417,27 +455,31 @@
                     <a href="mailto:ahad.shaikh@somaiya.edu" class="connect-link">
                         <i class="fas fa-envelope"></i>
                         <span>ahad.shaikh@somaiya.edu</span>
+                        <span class="link-status">[ACTIVE]</span>
                     </a>
                     
                     <a href="https://www.linkedin.com/in/ahad-shaikh-747625279/" target="_blank" class="connect-link">
                         <i class="fab fa-linkedin"></i>
                         <span>linkedin.com/in/ahad-shaikh</span>
+                        <span class="link-status">[ONLINE]</span>
                     </a>
                     
                     <a href="https://github.com/AhadShaikh12" target="_blank" class="connect-link">
                         <i class="fab fa-github"></i>
                         <span>github.com/AhadShaikh12</span>
+                        <span class="link-status">[ACTIVE]</span>
                     </a>
                     
                     <a href="https://tryhackme.com/p/AhadShk" target="_blank" class="connect-link">
                         <i class="fas fa-shield-hal"></i>
                         <span>tryhackme.com/p/AhadShk</span>
+                        <span class="link-status">[ONLINE]</span>
                     </a>
                 </div>
                 
                 <div class="connect-footer">
-                    <span class="encryption">● SECURE CONNECTION</span>
-                    <span class="connection-id">AES-256</span>
+                    <span class="encryption">● SECURE CONNECTION (AES-256)</span>
+                    <span class="connection-id">SESSION: 0x8F3A_2B4D</span>
                 </div>
             </div>
         </div>
@@ -453,6 +495,9 @@
             </div>
             <div class="copyright">
                 © 2025 Ahad Shaikh. All rights reserved.
+            </div>
+            <div class="footer-terminal">
+                <span>> system.shutdown --preserve-session</span>
             </div>
         </div>
     </footer>
