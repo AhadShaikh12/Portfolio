@@ -413,8 +413,6 @@ html {
     transform: translateY(-2px);
 }
 
-
-
 .hero-stats .stat-item {
     text-align: center;
 }
@@ -823,7 +821,9 @@ html {
     border-top: 1px solid rgba(0, 255, 157, 0.2);
 }
 
-/* TRYHACKME BADGE SECTION - FIXED CONTAINER */
+/* ========================================================= */
+/* TRYHACKME BADGE SECTION - CLEAN FIXED SIZE (FINAL WORKING) */
+/* ========================================================= */
 .badge-card {
     background: var(--glass-bg);
     border: 1px solid var(--terminal-green);
@@ -867,29 +867,50 @@ html {
 }
 
 .badge-iframe-wrapper {
+    width: 100%;
     display: flex;
     justify-content: center;
-    width: 100%;
+    align-items: center;
     margin-bottom: 1.5rem;
 }
 
 .badge-iframe-container {
-    width: 100%;
-    max-width: 800px;
-    height: 220px;
+    width: 330px;
+    height: 90px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     border: 2px solid var(--terminal-green);
     border-radius: var(--border-radius);
     overflow: hidden;
-    box-shadow: 0 0 30px rgba(0, 255, 157, 0.3);
-    background: rgba(0, 0, 0, 0.2);
+
+    background: rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 25px rgba(0, 255, 157, 0.3);
+
+    line-height: 0;
 }
 
 .badge-iframe-container iframe {
-    width: 100%;
-    height: 100%;
+    width: 330px;
+    height: 90px;
+    border: none;
     display: block;
     background: transparent;
-    border: none;
+}
+
+/* MOBILE FIX */
+@media (max-width: 480px) {
+    .badge-iframe-container {
+        width: 300px;
+        height: 84px;
+    }
+
+    .badge-iframe-container iframe {
+        width: 300px;
+        height: 84px;
+    }
 }
 
 .badge-footer {
@@ -1113,23 +1134,19 @@ footer {
     .hero-title {
         font-size: 3.5rem;
     }
-    
+
     .matrix-content {
         grid-template-columns: 1fr;
     }
-    
+
     .radar-container {
         max-width: 350px;
     }
-    
+
     .skill-items {
         grid-template-columns: 1fr;
     }
-    
-    .badge-iframe-container {
-        height: 200px;
-    }
-    
+
     .name-animation {
         font-size: 3rem;
     }
@@ -1139,7 +1156,7 @@ footer {
     .hamburger {
         display: flex;
     }
-    
+
     .nav-menu {
         position: fixed;
         top: var(--nav-height);
@@ -1152,45 +1169,41 @@ footer {
         padding: 2rem;
         z-index: 1000;
     }
-    
+
     .nav-menu.active {
         left: 0;
     }
-    
+
     .nav-links {
         flex-direction: column;
         align-items: center;
     }
-    
+
     .hero-title {
         font-size: 2.5rem;
     }
-    
+
     .hero-desc {
         font-size: 1rem;
     }
-    
+
     .info-row {
         flex-direction: column;
         gap: 0.5rem;
     }
-    
+
     .info-label {
         width: 100%;
     }
-    
+
     .certs-grid {
         grid-template-columns: 1fr;
     }
-    
-    .badge-iframe-container {
-        height: 180px;
-    }
-    
+
     .hero-stats {
         flex-wrap: wrap;
     }
-    
+
     .name-animation {
         font-size: 2.5rem;
     }
@@ -1200,33 +1213,29 @@ footer {
     .hero-title {
         font-size: 2rem;
     }
-    
+
     .hero-subtitle {
         font-size: 1.1rem;
     }
-    
+
     .cyber-button {
         width: 100%;
         justify-content: center;
     }
-    
+
     .connect-link {
         font-size: 12px;
     }
-    
+
     .category-tag {
         font-size: 10px;
         padding: 0.3rem 0.8rem;
     }
-    
-    .badge-iframe-container {
-        height: 160px;
-    }
-    
+
     .name-animation {
         font-size: 2rem;
     }
-    
+
     .badge-footer {
         flex-direction: column;
         gap: 0.5rem;
