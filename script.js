@@ -1,279 +1,210 @@
+// ============================================================
+// AHAD SHAIKH — CYBERSECURITY PORTFOLIO
 // script.js
-document.addEventListener('DOMContentLoaded', function() {
-    // Preloader with name animation
+// ============================================================
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    // ---- PRELOADER ----
     const preloader = document.getElementById('preloader');
-    
-    // Hide preloader after animation completes
-    setTimeout(() => {
-        preloader.style.opacity = '0';
+    window.addEventListener('load', () => {
         setTimeout(() => {
-            preloader.style.display = 'none';
-        }, 800);
-    }, 3500); // Wait for name animation and progress bar to complete
-
-    // Navbar shrink effect
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.classList.add('shrink');
-        } else {
-            navbar.classList.remove('shrink');
-        }
+            preloader.classList.add('hide');
+            setTimeout(() => {
+                preloader.style.display = 'none';
+                initAnimations();
+            }, 700);
+        }, 3100);
     });
 
-    // Mobile menu
-    const hamburger = document.getElementById('hamburger');
-    const navMenu = document.getElementById('navMenu');
-    
-    hamburger.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-    });
+    // ---- MATRIX CANVAS ----
+    const canvas = document.getElementById('matrixCanvas');
+    const ctx = canvas.getContext('2d');
+    let cols, drops;
 
-    // Close mobile menu when clicking a link
-    document.querySelectorAll('.nav-link').forEach(link => {
-        link.addEventListener('click', () => {
-            navMenu.classList.remove('active');
-        });
-    });
-
-    // Active link highlighting
-    const sections = document.querySelectorAll('.section');
-    const navLinks = document.querySelectorAll('.nav-link');
-
-    window.addEventListener('scroll', () => {
-        let current = '';
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop - 100;
-            const sectionHeight = section.clientHeight;
-            if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
-                current = section.getAttribute('id');
-            }
-        });
-
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === `#${current}`) {
-                link.classList.add('active');
-            }
-        });
-    });
-
-    // Create Radar Chart (without percentages)
-    function createRadarChart() {
-        const svg = document.getElementById('radarChart');
-        if (!svg) return;
-        
-        svg.innerHTML = ''; // Clear existing
-        
-        const centerX = 200;
-        const centerY = 200;
-        const radius = 150;
-        
-        // Categories - values are for visual fill only (not displayed)
-        const categories = [
-            { name: 'SecOps', value: 85 },
-            { name: 'Incident Response', value: 70 },
-            { name: 'Malware Analysis', value: 60 },
-            { name: 'Pen Testing', value: 75 },
-            { name: 'Exploitation', value: 65 },
-            { name: 'Red Teaming', value: 55 }
-        ];
-        
-        const numCategories = categories.length;
-        const angleStep = (Math.PI * 2) / numCategories;
-        
-        // Draw background circles
-        for (let level = 1; level <= 5; level++) {
-            const levelRadius = (radius / 5) * level;
-            const points = [];
-            
-            for (let i = 0; i < numCategories; i++) {
-                const angle = i * angleStep - Math.PI / 2; // Start from top
-                const x = centerX + Math.cos(angle) * levelRadius;
-                const y = centerY + Math.sin(angle) * levelRadius;
-                points.push(`${x},${y}`);
-            }
-            
-            // Close the polygon
-            points.push(points[0]);
-            
-            const gridLine = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
-            gridLine.setAttribute("points", points.join(' '));
-            gridLine.setAttribute("class", "radar-grid-line");
-            gridLine.setAttribute("fill", "none");
-            svg.appendChild(gridLine);
-        }
-        
-        // Draw axis lines
-        for (let i = 0; i < numCategories; i++) {
-            const angle = i * angleStep - Math.PI / 2;
-            const x = centerX + Math.cos(angle) * radius;
-            const y = centerY + Math.sin(angle) * radius;
-            
-            const axisLine = document.createElementNS("http://www.w3.org/2000/svg", "line");
-            axisLine.setAttribute("x1", centerX);
-            axisLine.setAttribute("y1", centerY);
-            axisLine.setAttribute("x2", x);
-            axisLine.setAttribute("y2", y);
-            axisLine.setAttribute("class", "radar-axis-line");
-            svg.appendChild(axisLine);
-            
-            // Add category labels (shortened)
-            const labelX = centerX + Math.cos(angle) * (radius + 25);
-            const labelY = centerY + Math.sin(angle) * (radius + 20);
-            
-            let shortName = '';
-            switch(i) {
-                case 0: shortName = 'SEC'; break;
-                case 1: shortName = 'IR'; break;
-                case 2: shortName = 'MAL'; break;
-                case 3: shortName = 'PT'; break;
-                case 4: shortName = 'EXP'; break;
-                case 5: shortName = 'RED'; break;
-            }
-            
-            const label = document.createElementNS("http://www.w3.org/2000/svg", "text");
-            label.setAttribute("x", labelX);
-            label.setAttribute("y", labelY);
-            label.setAttribute("text-anchor", "middle");
-            label.setAttribute("dominant-baseline", "middle");
-            label.setAttribute("fill", "#00ff9d");
-            label.setAttribute("font-size", "10");
-            label.setAttribute("font-family", "Space Grotesk");
-            label.textContent = shortName;
-            svg.appendChild(label);
-        }
-        
-        // Draw data polygon (visually filled but no numbers shown)
-        const dataPoints = [];
-        for (let i = 0; i < numCategories; i++) {
-            const angle = i * angleStep - Math.PI / 2;
-            const valueRadius = (categories[i].value / 100) * radius;
-            const x = centerX + Math.cos(angle) * valueRadius;
-            const y = centerY + Math.sin(angle) * valueRadius;
-            dataPoints.push(`${x},${y}`);
-        }
-        
-        // Close the polygon
-        dataPoints.push(dataPoints[0]);
-        
-        const dataPolygon = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
-        dataPolygon.setAttribute("points", dataPoints.join(' '));
-        dataPolygon.setAttribute("class", "radar-polygon");
-        svg.appendChild(dataPolygon);
-        
-        // Draw points at vertices
-        for (let i = 0; i < numCategories; i++) {
-            const angle = i * angleStep - Math.PI / 2;
-            const valueRadius = (categories[i].value / 100) * radius;
-            const x = centerX + Math.cos(angle) * valueRadius;
-            const y = centerY + Math.sin(angle) * valueRadius;
-            
-            const point = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-            point.setAttribute("cx", x);
-            point.setAttribute("cy", y);
-            point.setAttribute("r", "4");
-            point.setAttribute("class", "radar-point");
-            svg.appendChild(point);
-        }
+    function initCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        cols = Math.floor(canvas.width / 18);
+        drops = Array(cols).fill(1);
     }
 
-    // Scroll reveal observer
-    const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('revealed');
-                
-                // Create radar chart when matrix section is visible
-                if (entry.target.id === 'matrix') {
-                    createRadarChart();
-                }
+    function drawMatrix() {
+        ctx.fillStyle = 'rgba(7, 11, 16, 0.05)';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = '#00e5a0';
+        ctx.font = '13px JetBrains Mono';
+        const chars = '01アイウエオカキクケコサシスセソタチツテトナニヌネノ{}[]<>/\\|=+-_#@!%&';
+        drops.forEach((y, i) => {
+            const ch = chars[Math.floor(Math.random() * chars.length)];
+            ctx.fillText(ch, i * 18, y * 18);
+            if (y * 18 > canvas.height && Math.random() > 0.975) drops[i] = 0;
+            drops[i]++;
+        });
+    }
+
+    initCanvas();
+    setInterval(drawMatrix, 60);
+    window.addEventListener('resize', initCanvas);
+
+    // ---- NAVBAR ----
+    const navbar = document.getElementById('navbar');
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    const allNavLinks = document.querySelectorAll('.nav-link');
+
+    window.addEventListener('scroll', () => {
+        navbar.classList.toggle('scrolled', window.scrollY > 40);
+    });
+
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('open');
+        navLinks.classList.toggle('open');
+    });
+
+    allNavLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('open');
+            navLinks.classList.remove('open');
+        });
+    });
+
+    // Active link on scroll
+    const sections = document.querySelectorAll('section[id]');
+    window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY + 100;
+        sections.forEach(sec => {
+            if (scrollY >= sec.offsetTop && scrollY < sec.offsetTop + sec.offsetHeight) {
+                allNavLinks.forEach(l => l.classList.remove('active'));
+                const active = document.querySelector(`.nav-link[href="#${sec.id}"]`);
+                if (active) active.classList.add('active');
             }
         });
-    }, { threshold: 0.2, rootMargin: '0px' });
-
-    document.querySelectorAll('.section').forEach(section => {
-        revealObserver.observe(section);
     });
 
-    // Scroll to top button
-    const scrollBtn = document.getElementById('scrollTop');
-    
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 400) {
-            scrollBtn.classList.add('show');
+    // ---- TYPED TEXT ----
+    const typedEl = document.getElementById('typedText');
+    const roles = [
+        'Cybersecurity Enthusiast',
+        'Ethical Hacker (Learning)',
+        'Network Security Student',
+        'CTF Player',
+        'Bug Hunter (In Training)',
+    ];
+    let ri = 0, ci = 0, deleting = false;
+
+    function type() {
+        const current = roles[ri];
+        if (!deleting) {
+            typedEl.textContent = current.slice(0, ++ci);
+            if (ci === current.length) {
+                deleting = true;
+                setTimeout(type, 2200);
+                return;
+            }
         } else {
-            scrollBtn.classList.remove('show');
+            typedEl.textContent = current.slice(0, --ci);
+            if (ci === 0) {
+                deleting = false;
+                ri = (ri + 1) % roles.length;
+            }
         }
+        setTimeout(type, deleting ? 40 : 80);
+    }
+    setTimeout(type, 3500);
+
+    // ---- SCROLL TO TOP ----
+    const scrollTopBtn = document.getElementById('scrollTop');
+    window.addEventListener('scroll', () => {
+        scrollTopBtn.classList.toggle('show', window.scrollY > 500);
     });
-    
-    scrollBtn.addEventListener('click', () => {
+    scrollTopBtn.addEventListener('click', () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    // 3D tilt effect on cards
-    document.querySelectorAll('.profile-card, .matrix-card, .skill-category, .cert-card, .badge-card, .connect-card').forEach(card => {
+    // ---- INTERSECTION OBSERVER ----
+    function initAnimations() {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+
+                entry.target.classList.add('visible');
+
+                // Animate skill bars
+                entry.target.querySelectorAll('.skill-fill').forEach(bar => {
+                    const w = bar.getAttribute('data-w');
+                    setTimeout(() => { bar.style.width = w + '%'; }, 100);
+                });
+
+                // Animate study bars
+                entry.target.querySelectorAll('.study-bar div').forEach(bar => {
+                    const w = bar.parentElement.querySelector('.study-pct')?.textContent || '0%';
+                    setTimeout(() => { bar.style.width = w; }, 100);
+                });
+
+                // Counter animation
+                entry.target.querySelectorAll('[data-count]').forEach(el => {
+                    const target = parseInt(el.getAttribute('data-count'));
+                    let current = 0;
+                    const step = Math.ceil(target / 30);
+                    const timer = setInterval(() => {
+                        current = Math.min(current + step, target);
+                        el.textContent = current + '+';
+                        if (current >= target) { el.textContent = target + '+'; clearInterval(timer); }
+                    }, 50);
+                });
+
+                observer.unobserve(entry.target);
+            });
+        }, { threshold: 0.12 });
+
+        document.querySelectorAll('.section, .hero').forEach(el => {
+            observer.observe(el);
+        });
+    }
+
+    // Also run for hero immediately
+    const heroSection = document.querySelector('.hero');
+    if (heroSection) {
+        setTimeout(() => {
+            heroSection.classList.add('visible');
+        }, 3200);
+    }
+
+    // ---- 3D TILT ON CARDS ----
+    document.querySelectorAll('.project-card, .cert-card, .skill-block, .highlight-item').forEach(card => {
         card.addEventListener('mousemove', (e) => {
             const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            
-            const centerX = rect.width / 2;
-            const centerY = rect.height / 2;
-            
-            const rotateX = (y - centerY) / 25;
-            const rotateY = (centerX - x) / 25;
-            
-            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+            const x = (e.clientX - rect.left) / rect.width - 0.5;
+            const y = (e.clientY - rect.top) / rect.height - 0.5;
+            card.style.transform = `perspective(600px) rotateY(${x * 6}deg) rotateX(${-y * 6}deg) translateY(-4px)`;
         });
-        
         card.addEventListener('mouseleave', () => {
             card.style.transform = '';
         });
     });
 
-    // Parallax effect for hero section
-    window.addEventListener('scroll', () => {
-        const heroSection = document.querySelector('.hero-section');
-        if (heroSection) {
-            const scrollY = window.scrollY;
-            heroSection.style.backgroundPositionY = scrollY * 0.5 + 'px';
-        }
-    });
-
-    // Fix for initial active link
-    const hash = window.location.hash;
-    if (hash) {
-        const targetLink = document.querySelector(`a[href="${hash}"]`);
-        if (targetLink) {
-            navLinks.forEach(link => link.classList.remove('active'));
-            targetLink.classList.add('active');
-        }
-    }
-
-    // Add animation to segmented bars on scroll
-    const skillItems = document.querySelectorAll('.skill-item');
-    const skillObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateX(0)';
+    // ---- SMOOTH NAV LINKS ----
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', (e) => {
+            const id = link.getAttribute('href').slice(1);
+            const target = document.getElementById(id);
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth' });
             }
         });
-    }, { threshold: 0.5 });
-
-    skillItems.forEach(item => {
-        item.style.opacity = '0';
-        item.style.transform = 'translateX(-20px)';
-        item.style.transition = 'all 0.5s';
-        skillObserver.observe(item);
     });
 
-    // Ensure iframe loads properly
-    const iframe = document.querySelector('.badge-iframe-container iframe');
-    if (iframe) {
-        iframe.onload = function() {
-            console.log('TryHackMe iframe loaded successfully');
-        };
+    // ---- GLITCH EFFECT ON HERO NAME ----
+    const heroName = document.querySelector('.hero-name');
+    if (heroName) {
+        setInterval(() => {
+            if (Math.random() > 0.85) {
+                heroName.style.textShadow = `${Math.random() * 6 - 3}px 0 #ff4757, ${Math.random() * -6 + 3}px 0 #00bfff`;
+                setTimeout(() => { heroName.style.textShadow = ''; }, 80);
+            }
+        }, 3000);
     }
+
 });

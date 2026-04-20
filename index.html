@@ -1,496 +1,874 @@
+Index · HTML
+Copy
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ahad Shaikh | Cyber Security</title>
-    <!-- Fonts & Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Ahad Shaikh | Cybersecurity Portfolio</title>
+    <meta name="description" content="Ahad Shaikh – Cybersecurity Enthusiast specializing in ethical hacking, network security, and digital forensics. BCA Cybersecurity student at Somaiya Vidyavihar University.">
+    <meta name="keywords" content="cybersecurity, ethical hacking, penetration testing, network security, TryHackMe, Kali Linux, Wireshark, Burp Suite, bug bounty, digital forensics">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- PRELOADER WITH NAME ANIMATION -->
-    <div class="preloader" id="preloader">
-        <div class="cyber-loader">
-            <div class="name-animation">
-                <span class="name-part">A</span>
-                <span class="name-part">h</span>
-                <span class="name-part">a</span>
-                <span class="name-part">d</span>
-                <span class="name-part">&nbsp;</span>
-                <span class="name-part">S</span>
-                <span class="name-part">h</span>
-                <span class="name-part">a</span>
-                <span class="name-part">i</span>
-                <span class="name-part">k</span>
-                <span class="name-part">h</span>
-            </div>
-            <div class="loader-text">[ SYSTEM BOOT ]</div>
-            <div class="loader-progress">
-                <div class="progress-bar"></div>
-            </div>
-            <div class="loader-status">> ACCESS GRANTED_</div>
+ 
+<!-- PRELOADER -->
+<div class="preloader" id="preloader">
+    <div class="preloader-inner">
+        <div class="boot-sequence">
+            <div class="boot-line" style="--d:0.1s">> INITIALIZING SECURE ENVIRONMENT...</div>
+            <div class="boot-line" style="--d:0.6s">> LOADING KERNEL MODULES [OK]</div>
+            <div class="boot-line" style="--d:1.1s">> ESTABLISHING ENCRYPTED CHANNEL [OK]</div>
+            <div class="boot-line" style="--d:1.6s">> AUTHENTICATING USER: AHAD SHAIKH</div>
+            <div class="boot-line success" style="--d:2.1s">> ACCESS GRANTED ██████████ 100%</div>
+        </div>
+        <div class="preloader-name">
+            <span class="char" style="--i:1">A</span><span class="char" style="--i:2">H</span><span class="char" style="--i:3">A</span><span class="char" style="--i:4">D</span>
+            <span class="char space" style="--i:5">&nbsp;</span>
+            <span class="char" style="--i:6">S</span><span class="char" style="--i:7">H</span><span class="char" style="--i:8">A</span><span class="char" style="--i:9">I</span><span class="char" style="--i:10">K</span><span class="char" style="--i:11">H</span>
         </div>
     </div>
-
-    <!-- SCAN LINES OVERLAY -->
-    <div class="scan-lines"></div>
-    
-    <!-- CRT EFFECT -->
-    <div class="crt-effect"></div>
-
-    <!-- SCROLL TOP BUTTON -->
-    <button class="scroll-top" id="scrollTop">
-        <i class="fas fa-chevron-up"></i>
-    </button>
-
-    <!-- NAVBAR -->
-    <nav class="cyber-nav" id="navbar">
-        <div class="nav-container">
-            <div class="nav-menu" id="navMenu">
-                <ul class="nav-links">
-                    <li><a href="#home" class="nav-link active">[HOME]</a></li>
-                    <li><a href="#about" class="nav-link">[ABOUT]</a></li>
-                    <li><a href="#matrix" class="nav-link">[MATRIX]</a></li>
-                    <li><a href="#tech-skills" class="nav-link">[TECH SKILLS]</a></li>
-                    <li><a href="#certifications" class="nav-link">[CERTS]</a></li>
-                    <li><a href="#badge" class="nav-link">[THM]</a></li>
-                    <li><a href="#connect" class="nav-link">[CONNECT]</a></li>
-                </ul>
+</div>
+ 
+<!-- NOISE OVERLAY -->
+<div class="noise-overlay"></div>
+ 
+<!-- SCROLL TO TOP -->
+<button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+</button>
+ 
+<!-- NAVBAR -->
+<nav id="navbar">
+    <div class="nav-inner">
+        <a href="#home" class="nav-logo">
+            <span class="logo-bracket">[</span>
+            <span class="logo-text">AHAD.SH</span>
+            <span class="logo-bracket">]</span>
+        </a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home" class="nav-link active">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#labs" class="nav-link">Labs</a></li>
+            <li><a href="#certifications" class="nav-link">Certs</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+ 
+<!-- ==================== HERO ==================== -->
+<section id="home" class="hero">
+    <canvas id="matrixCanvas"></canvas>
+    <div class="hero-content">
+        <div class="hero-badge">
+            <span class="status-dot"></span>
+            AVAILABLE FOR OPPORTUNITIES
+        </div>
+        <p class="hero-greeting">> Hello, World. I am</p>
+        <h1 class="hero-name">AHAD<br><span>SHAIKH</span></h1>
+        <div class="hero-roles">
+            <span class="role-prefix">$ whoami —</span>
+            <span class="typed-text" id="typedText"></span><span class="cursor">|</span>
+        </div>
+        <p class="hero-desc">
+            BCA Cybersecurity student at Somaiya Vidyavihar University, building hands-on expertise in ethical hacking, network analysis, and digital forensics. I break things to understand how to fix them.
+        </p>
+        <div class="hero-actions">
+            <a href="assets/Resume.pdf" class="btn btn-primary" download>
+                <i class="fas fa-download"></i> Download Resume
+            </a>
+            <a href="#projects" class="btn btn-outline">
+                <i class="fas fa-terminal"></i> View Projects
+            </a>
+        </div>
+        <div class="hero-stats">
+            <div class="stat-item">
+                <span class="stat-num" data-count="10">0</span>
+                <span class="stat-label">THM Rooms</span>
             </div>
-            <div class="hamburger" id="hamburger">
-                <span></span><span></span><span></span>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-num" data-count="4">0</span>
+                <span class="stat-label">Certifications</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-num" data-count="6">0</span>
+                <span class="stat-label">Projects</span>
             </div>
         </div>
-    </nav>
-
-    <!-- HERO SECTION -->
-    <section id="home" class="section hero-section">
-        <div class="grid-background"></div>
-        <div class="floating-particles"></div>
-        
-        <div class="hero-container">
-            <div class="hero-terminal-line">> SYSTEM_STATUS: ONLINE_</div>
-            <h1 class="hero-title">AHAD SHAIKH</h1>
-            <div class="hero-subtitle">
-                <span class="bracket">[</span> CYBERSECURITY ENTHUSIAST <span class="bracket">]</span>
+    </div>
+    <div class="hero-terminal">
+        <div class="terminal-window">
+            <div class="terminal-bar">
+                <span class="t-dot red"></span>
+                <span class="t-dot yellow"></span>
+                <span class="t-dot green"></span>
+                <span class="t-title">ahad@kali:~$</span>
             </div>
-            
-            <p class="hero-desc">Currently focusing on Cybersecurity, ethical hacking, networking fundamentals, and real-world security concepts. My goal is to build a strong career in Cybersecurity through continuous learning and hands-on practice.</p>
-            
-            <div class="hero-buttons">
-                <a href="assets/Resume.pdf" class="cyber-button primary" download>
-                    <i class="fas fa-download"></i> DOWNLOAD RESUME
+            <div class="terminal-body" id="terminalBody">
+                <div class="t-line"><span class="t-prompt">ahad@kali:~$</span> <span class="t-cmd">nmap -sV target.lab</span></div>
+                <div class="t-line out">Starting Nmap scan...</div>
+                <div class="t-line out">PORT     STATE  SERVICE   VERSION</div>
+                <div class="t-line out success">22/tcp   open   ssh       OpenSSH 7.9</div>
+                <div class="t-line out success">80/tcp   open   http      Apache 2.4.38</div>
+                <div class="t-line out warn">3306/tcp open   mysql     MySQL 5.7.28</div>
+                <div class="t-line out">[!] MySQL port exposed — potential attack vector</div>
+                <div class="t-line"><span class="t-prompt">ahad@kali:~$</span> <span class="t-cmd blink">_</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+ 
+<!-- ==================== ABOUT ==================== -->
+<section id="about" class="section">
+    <div class="container">
+        <div class="section-head">
+            <span class="section-tag">> cat about.md</span>
+            <h2 class="section-title">About Me</h2>
+        </div>
+ 
+        <div class="about-grid">
+            <div class="about-text">
+                <p class="about-intro">I'm a cybersecurity student with a hacker's mindset — I believe the best defenders are those who think like attackers.</p>
+                <p>Currently pursuing a BCA in Cybersecurity at Somaiya Vidyavihar University, I spend my free time breaking into intentionally vulnerable machines on TryHackMe, analyzing network traffic with Wireshark, and studying real-world CVEs to understand how attackers think.</p>
+                <p>My approach to cybersecurity is methodical: understand the attack surface, enumerate carefully, exploit precisely, and document everything. I'm particularly drawn to web application security, network forensics, and the science of malware behavior.</p>
+                <div class="about-highlights">
+                    <div class="highlight-item">
+                        <i class="fas fa-crosshairs"></i>
+                        <div>
+                            <strong>Attack Mindset</strong>
+                            <span>Understanding threats from the adversary's perspective</span>
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-flask"></i>
+                        <div>
+                            <strong>Lab-First Learning</strong>
+                            <span>Hands-on practice over theory-only studying</span>
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-file-alt"></i>
+                        <div>
+                            <strong>Documentation</strong>
+                            <span>Detailed write-ups for every lab and finding</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+ 
+            <div class="about-card">
+                <div class="card-header">
+                    <i class="fas fa-id-card"></i> profile.json
+                </div>
+                <div class="about-info">
+                    <div class="info-line">
+                        <span class="info-key">"name"</span>
+                        <span class="info-colon">:</span>
+                        <span class="info-val string">"Ahad Shaikh"</span>
+                    </div>
+                    <div class="info-line">
+                        <span class="info-key">"degree"</span>
+                        <span class="info-colon">:</span>
+                        <span class="info-val string">"BCA Cybersecurity"</span>
+                    </div>
+                    <div class="info-line">
+                        <span class="info-key">"university"</span>
+                        <span class="info-colon">:</span>
+                        <span class="info-val string">"Somaiya Vidyavihar"</span>
+                    </div>
+                    <div class="info-line">
+                        <span class="info-key">"location"</span>
+                        <span class="info-colon">:</span>
+                        <span class="info-val string">"Mumbai, India"</span>
+                    </div>
+                    <div class="info-line">
+                        <span class="info-key">"focus"</span>
+                        <span class="info-colon">:</span>
+                        <span class="info-val array">["Pen Testing", "Web Security", "Network Analysis"]</span>
+                    </div>
+                    <div class="info-line">
+                        <span class="info-key">"status"</span>
+                        <span class="info-colon">:</span>
+                        <span class="info-val green">"actively_learning"</span>
+                    </div>
+                    <div class="info-line">
+                        <span class="info-key">"open_to"</span>
+                        <span class="info-colon">:</span>
+                        <span class="info-val green">"opportunities"</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+ 
+<!-- ==================== SKILLS ==================== -->
+<section id="skills" class="section">
+    <div class="container">
+        <div class="section-head">
+            <span class="section-tag">> ls -la skills/</span>
+            <h2 class="section-title">Technical Skills</h2>
+        </div>
+ 
+        <div class="skills-grid">
+            <!-- Security Tools -->
+            <div class="skill-block">
+                <div class="skill-block-header">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Security Tools</span>
+                </div>
+                <div class="skill-list">
+                    <div class="skill-row">
+                        <span class="skill-name">Kali Linux</span>
+                        <div class="skill-bar"><div class="skill-fill" data-w="45"></div></div>
+                        <span class="skill-lvl">Learning</span>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill-name">Wireshark</span>
+                        <div class="skill-bar"><div class="skill-fill" data-w="40"></div></div>
+                        <span class="skill-lvl">Learning</span>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill-name">Burp Suite</span>
+                        <div class="skill-bar"><div class="skill-fill" data-w="35"></div></div>
+                        <span class="skill-lvl">Learning</span>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill-name">Nmap</span>
+                        <div class="skill-bar"><div class="skill-fill" data-w="50"></div></div>
+                        <span class="skill-lvl">Familiar</span>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill-name">Metasploit</span>
+                        <div class="skill-bar"><div class="skill-fill" data-w="30"></div></div>
+                        <span class="skill-lvl">Learning</span>
+                    </div>
+                </div>
+            </div>
+ 
+            <!-- Programming -->
+            <div class="skill-block">
+                <div class="skill-block-header">
+                    <i class="fas fa-code"></i>
+                    <span>Programming</span>
+                </div>
+                <div class="skill-list">
+                    <div class="skill-row">
+                        <span class="skill-name">Python</span>
+                        <div class="skill-bar"><div class="skill-fill" data-w="55"></div></div>
+                        <span class="skill-lvl">Familiar</span>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill-name">HTML/CSS</span>
+                        <div class="skill-bar"><div class="skill-fill" data-w="55"></div></div>
+                        <span class="skill-lvl">Familiar</span>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill-name">JavaScript</span>
+                        <div class="skill-bar"><div class="skill-fill" data-w="30"></div></div>
+                        <span class="skill-lvl">Learning</span>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill-name">SQL</span>
+                        <div class="skill-bar"><div class="skill-fill" data-w="50"></div></div>
+                        <span class="skill-lvl">Familiar</span>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill-name">Bash Scripting</span>
+                        <div class="skill-bar"><div class="skill-fill" data-w="35"></div></div>
+                        <span class="skill-lvl">Learning</span>
+                    </div>
+                </div>
+            </div>
+ 
+            <!-- Concepts -->
+            <div class="skill-block full-width">
+                <div class="skill-block-header">
+                    <i class="fas fa-brain"></i>
+                    <span>Security Concepts & Knowledge Areas</span>
+                </div>
+                <div class="concept-tags">
+                    <span class="concept-tag">Network Security</span>
+                    <span class="concept-tag">OWASP Top 10</span>
+                    <span class="concept-tag">TCP/IP Protocol Suite</span>
+                    <span class="concept-tag">Linux Administration</span>
+                    <span class="concept-tag">Web Application Security</span>
+                    <span class="concept-tag">Digital Forensics</span>
+                    <span class="concept-tag">Malware Analysis Basics</span>
+                    <span class="concept-tag">Incident Response</span>
+                    <span class="concept-tag">SQL Injection</span>
+                    <span class="concept-tag">XSS Attacks</span>
+                    <span class="concept-tag">Cryptography Basics</span>
+                    <span class="concept-tag">OSINT</span>
+                    <span class="concept-tag">Reconnaissance</span>
+                    <span class="concept-tag">Privilege Escalation</span>
+                    <span class="concept-tag">CTF Challenges</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+ 
+<!-- ==================== PROJECTS ==================== -->
+<section id="projects" class="section">
+    <div class="container">
+        <div class="section-head">
+            <span class="section-tag">> git log --oneline projects/</span>
+            <h2 class="section-title">Security Projects</h2>
+        </div>
+ 
+        <div class="projects-grid">
+ 
+            <!-- Project 1 -->
+            <div class="project-card" data-category="network">
+                <div class="project-header">
+                    <div class="project-id">01</div>
+                    <div class="project-status online">DOCUMENTED</div>
+                </div>
+                <h3 class="project-title">Network Traffic Analysis — Detecting ARP Poisoning</h3>
+                <p class="project-desc">Captured and analyzed network packets in a controlled lab environment to identify ARP poisoning indicators. Used Wireshark filters to isolate malicious traffic patterns and documented the attack signature.</p>
+                <div class="project-tools">
+                    <span>Wireshark</span>
+                    <span>VirtualBox</span>
+                    <span>Kali Linux</span>
+                    <span>ARP Protocol</span>
+                </div>
+                <div class="project-findings">
+                    <div class="finding-item">
+                        <i class="fas fa-search"></i>
+                        Identified duplicate ARP replies from non-gateway MAC
+                    </div>
+                    <div class="finding-item">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        Captured cleartext HTTP credentials via MITM position
+                    </div>
+                    <div class="finding-item">
+                        <i class="fas fa-check"></i>
+                        Documented 3 detection signatures for SOC use
+                    </div>
+                </div>
+                <a href="https://github.com/AhadShaikh12" class="project-link" target="_blank">
+                    <i class="fab fa-github"></i> View Write-up
                 </a>
             </div>
-            
-            <div class="hero-stats">
-                
+ 
+            <!-- Project 2 -->
+            <div class="project-card" data-category="web">
+                <div class="project-header">
+                    <div class="project-id">02</div>
+                    <div class="project-status online">DOCUMENTED</div>
+                </div>
+                <h3 class="project-title">Web App Vulnerability Scanner — DVWA Lab</h3>
+                <p class="project-desc">Conducted manual and automated vulnerability assessment on DVWA (Damn Vulnerable Web Application). Identified, exploited, and documented SQL injection, XSS, and CSRF vulnerabilities following OWASP methodology.</p>
+                <div class="project-tools">
+                    <span>Burp Suite</span>
+                    <span>DVWA</span>
+                    <span>Python</span>
+                    <span>OWASP ZAP</span>
+                </div>
+                <div class="project-findings">
+                    <div class="finding-item">
+                        <i class="fas fa-search"></i>
+                        Found 8 critical/high vulnerabilities across OWASP Top 10
+                    </div>
+                    <div class="finding-item">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        Demonstrated SQLi to extract user credentials from DB
+                    </div>
+                    <div class="finding-item">
+                        <i class="fas fa-check"></i>
+                        Wrote remediation report with patch recommendations
+                    </div>
+                </div>
+                <a href="https://github.com/AhadShaikh12" class="project-link" target="_blank">
+                    <i class="fab fa-github"></i> View Write-up
+                </a>
+            </div>
+ 
+            <!-- Project 3 -->
+            <div class="project-card" data-category="recon">
+                <div class="project-header">
+                    <div class="project-id">03</div>
+                    <div class="project-status online">DOCUMENTED</div>
+                </div>
+                <h3 class="project-title">OSINT Reconnaissance Framework — Target Profiling</h3>
+                <p class="project-desc">Built a structured OSINT methodology for passive reconnaissance. Gathered organizational intelligence using public sources — subdomains, employee profiles, exposed services — to map the attack surface of a test target.</p>
+                <div class="project-tools">
+                    <span>theHarvester</span>
+                    <span>Shodan</span>
+                    <span>Maltego</span>
+                    <span>Google Dorks</span>
+                </div>
+                <div class="project-findings">
+                    <div class="finding-item">
+                        <i class="fas fa-search"></i>
+                        Discovered 12 exposed subdomains via passive DNS
+                    </div>
+                    <div class="finding-item">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        Found employee emails matching credential breach patterns
+                    </div>
+                    <div class="finding-item">
+                        <i class="fas fa-check"></i>
+                        Mapped full attack surface with risk scoring
+                    </div>
+                </div>
+                <a href="https://github.com/AhadShaikh12" class="project-link" target="_blank">
+                    <i class="fab fa-github"></i> View Write-up
+                </a>
+            </div>
+ 
+            <!-- Project 4 -->
+            <div class="project-card" data-category="scripting">
+                <div class="project-header">
+                    <div class="project-id">04</div>
+                    <div class="project-status online">DOCUMENTED</div>
+                </div>
+                <h3 class="project-title">Python Port Scanner — Custom Recon Tool</h3>
+                <p class="project-desc">Developed a multi-threaded port scanner in Python capable of performing SYN scans, banner grabbing, and service version detection. Built to understand how professional scanners like Nmap function internally.</p>
+                <div class="project-tools">
+                    <span>Python</span>
+                    <span>Sockets</span>
+                    <span>Threading</span>
+                    <span>Linux</span>
+                </div>
+                <div class="project-findings">
+                    <div class="finding-item">
+                        <i class="fas fa-search"></i>
+                        Scans 1–65535 ports with configurable thread count
+                    </div>
+                    <div class="finding-item">
+                        <i class="fas fa-check"></i>
+                        Performs banner grabbing for service fingerprinting
+                    </div>
+                    <div class="finding-item">
+                        <i class="fas fa-check"></i>
+                        Exports results to JSON for downstream analysis
+                    </div>
+                </div>
+                <a href="https://github.com/AhadShaikh12" class="project-link" target="_blank">
+                    <i class="fab fa-github"></i> View Code
+                </a>
+            </div>
+ 
+            <!-- Project 5 -->
+            <div class="project-card" data-category="forensics">
+                <div class="project-header">
+                    <div class="project-id">05</div>
+                    <div class="project-status building">IN PROGRESS</div>
+                </div>
+                <h3 class="project-title">Log Analysis & Threat Hunting — Simulated SIEM</h3>
+                <p class="project-desc">Analyzed simulated Windows and Apache access logs to identify indicators of compromise (IoCs). Practiced threat hunting techniques by correlating events across multiple log sources to reconstruct an attack timeline.</p>
+                <div class="project-tools">
+                    <span>Splunk (Free)</span>
+                    <span>Python</span>
+                    <span>RegEx</span>
+                    <span>Bash</span>
+                </div>
+                <div class="project-findings">
+                    <div class="finding-item">
+                        <i class="fas fa-search"></i>
+                        Detected brute-force pattern from failed auth events
+                    </div>
+                    <div class="finding-item">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        Identified C2 beacon pattern via HTTP timing analysis
+                    </div>
+                    <div class="finding-item">
+                        <i class="fas fa-check"></i>
+                        Built 5 custom detection queries/alerts
+                    </div>
+                </div>
+                <a href="https://github.com/AhadShaikh12" class="project-link" target="_blank">
+                    <i class="fab fa-github"></i> View Write-up
+                </a>
+            </div>
+ 
+            <!-- Project 6 -->
+            <div class="project-card" data-category="web">
+                <div class="project-header">
+                    <div class="project-id">06</div>
+                    <div class="project-status building">IN PROGRESS</div>
+                </div>
+                <h3 class="project-title">CTF Write-ups — Documenting My Hacking Journey</h3>
+                <p class="project-desc">A growing collection of detailed CTF and TryHackMe room write-ups documenting my methodology, tools, and thought process. Organized by category: Web, Crypto, Forensics, Network, and Privilege Escalation.</p>
+                <div class="project-tools">
+                    <span>TryHackMe</span>
+                    <span>Various Tools</span>
+                    <span>Markdown</span>
+                    <span>GitHub</span>
+                </div>
+                <div class="project-findings">
+                    <div class="finding-item">
+                        <i class="fas fa-check"></i>
+                        10+ rooms completed with full methodology notes
+                    </div>
+                    <div class="finding-item">
+                        <i class="fas fa-check"></i>
+                        Covers recon, exploitation, and post-exploitation
+                    </div>
+                    <div class="finding-item">
+                        <i class="fas fa-check"></i>
+                        Publicly available for the security community
+                    </div>
+                </div>
+                <a href="https://github.com/AhadShaikh12" class="project-link" target="_blank">
+                    <i class="fab fa-github"></i> View Write-ups
+                </a>
+            </div>
+ 
+        </div>
+    </div>
+</section>
+ 
+<!-- ==================== LABS ==================== -->
+<section id="labs" class="section">
+    <div class="container">
+        <div class="section-head">
+            <span class="section-tag">> ./run_labs.sh --list</span>
+            <h2 class="section-title">Lab Practice & Platforms</h2>
+        </div>
+ 
+        <div class="labs-layout">
+            <div class="labs-left">
+                <div class="lab-platform-card thm">
+                    <div class="platform-header">
+                        <i class="fas fa-flag"></i>
+                        <div>
+                            <h3>TryHackMe</h3>
+                            <span>tryhackme.com/p/AhadShk</span>
+                        </div>
+                        <a href="https://tryhackme.com/p/AhadShk" target="_blank" class="platform-link">Visit Profile ↗</a>
+                    </div>
+                    <div class="badge-container">
+                        <iframe 
+                            src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=4949717" 
+                            style="border:none;width:330px;height:90px;" 
+                            title="TryHackMe Badge"
+                            scrolling="no">
+                        </iframe>
+                    </div>
+                    <div class="rooms-list">
+                        <div class="room-item">
+                            <span class="room-icon complete"><i class="fas fa-check"></i></span>
+                            <span class="room-name">Pre Security Path</span>
+                            <span class="room-tag">Fundamentals</span>
+                        </div>
+                        <div class="room-item">
+                            <span class="room-icon complete"><i class="fas fa-check"></i></span>
+                            <span class="room-name">Cybersecurity 101</span>
+                            <span class="room-tag">Foundations</span>
+                        </div>
+                        <div class="room-item">
+                            <span class="room-icon complete"><i class="fas fa-check"></i></span>
+                            <span class="room-name">Linux Fundamentals</span>
+                            <span class="room-tag">Linux</span>
+                        </div>
+                        <div class="room-item">
+                            <span class="room-icon complete"><i class="fas fa-check"></i></span>
+                            <span class="room-name">Intro to Networking</span>
+                            <span class="room-tag">Network</span>
+                        </div>
+                        <div class="room-item">
+                            <span class="room-icon progress"><i class="fas fa-spinner"></i></span>
+                            <span class="room-name">Web Fundamentals</span>
+                            <span class="room-tag">Web</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+ 
+            <div class="labs-right">
+                <div class="lab-env-card">
+                    <h3><i class="fas fa-server"></i> Home Lab Setup</h3>
+                    <p>I run a virtualized lab environment for safe hands-on practice using:</p>
+                    <div class="env-items">
+                        <div class="env-item">
+                            <i class="fab fa-linux"></i>
+                            <span>Kali Linux — Primary attack machine</span>
+                        </div>
+                        <div class="env-item">
+                            <i class="fas fa-box"></i>
+                            <span>VirtualBox — Virtualization platform</span>
+                        </div>
+                        <div class="env-item">
+                            <i class="fas fa-spider"></i>
+                            <span>DVWA — Web vulnerability practice</span>
+                        </div>
+                        <div class="env-item">
+                            <i class="fas fa-network-wired"></i>
+                            <span>Isolated virtual networks for safe testing</span>
+                        </div>
+                    </div>
+                </div>
+ 
+                <div class="lab-study-card">
+                    <h3><i class="fas fa-book-open"></i> Current Study Focus</h3>
+                    <div class="study-items">
+                        <div class="study-item">
+                            <div class="study-bar-wrap">
+                                <span>Web App Pentesting</span>
+                                <span class="study-pct">40%</span>
+                            </div>
+                            <div class="study-bar"><div style="width:40%"></div></div>
+                        </div>
+                        <div class="study-item">
+                            <div class="study-bar-wrap">
+                                <span>Network Analysis</span>
+                                <span class="study-pct">50%</span>
+                            </div>
+                            <div class="study-bar"><div style="width:50%"></div></div>
+                        </div>
+                        <div class="study-item">
+                            <div class="study-bar-wrap">
+                                <span>Python for Security</span>
+                                <span class="study-pct">55%</span>
+                            </div>
+                            <div class="study-bar"><div style="width:55%"></div></div>
+                        </div>
+                        <div class="study-item">
+                            <div class="study-bar-wrap">
+                                <span>Linux Privilege Escalation</span>
+                                <span class="study-pct">30%</span>
+                            </div>
+                            <div class="study-bar"><div style="width:30%"></div></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
-
-    <!-- ABOUT SECTION - PROFILE CARD -->
-    <section id="about" class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">[ PROFILE ]</h2>
-                <div class="header-line"></div>
-                <div class="section-subtitle">> user_info.dat --details</div>
-            </div>
-            
-            <div class="profile-card">
-                <div class="profile-info">
-                    <div class="info-row">
-                        <span class="info-label">NAME</span>
-                        <span class="info-value">Ahad Shaikh</span>
-                    </div>
-                    <div class="info-row">
-                        <span class="info-label">DEGREE</span>
-                        <span class="info-value">BCA (Cybersecurity)</span>
-                    </div>
-                    <div class="info-row">
-                        <span class="info-label">UNIVERSITY</span>
-                        <span class="info-value">Somaiya Vidyavihar University</span>
-                    </div>
-                    <div class="info-row">
-                        <span class="info-label">GOAL</span>
-                        <span class="info-value">Building a career in Cybersecurity</span>
-                    </div>
-                    <div class="info-row">
-                        <span class="info-label">INTERESTS</span>
-                        <span class="info-value">Ethical Hacking, Network Security, Digital Forensics, Bug Bounty</span>
-                    </div>
-                </div>
-                <div class="profile-terminal">
-                    <span class="terminal-text">> profile.load() --success</span>
-                    <span class="terminal-text">> user.auth: authenticated</span>
-                </div>
-            </div>
+    </div>
+</section>
+ 
+<!-- ==================== CERTIFICATIONS ==================== -->
+<section id="certifications" class="section">
+    <div class="container">
+        <div class="section-head">
+            <span class="section-tag">> verify --credentials --all</span>
+            <h2 class="section-title">Certifications</h2>
         </div>
-    </section>
-
-    <!-- SKILL MATRIX SECTION - RADAR CHART ONLY -->
-    <section id="matrix" class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">[ SKILL MATRIX ]</h2>
-                <div class="header-line"></div>
-                <div class="section-subtitle">> analyzing_capabilities.exe</div>
-            </div>
-            
-            <div class="matrix-card">
-                <div class="matrix-header">
-                    <span class="matrix-title">LEARNING FOCUS AREAS</span>
-                    <span class="matrix-badge">ANALYSIS v2.1</span>
-                </div>
-                
-                <div class="matrix-content">
-                    <div class="radar-container" id="radarContainer">
-                        <svg class="radar-svg" viewBox="0 0 400 400" id="radarChart">
-                            <!-- Background grid will be drawn by JS -->
-                        </svg>
-                    </div>
-                    
-                    <div class="matrix-description">
-                        <p class="matrix-text">This matrix represents my learning focus areas in cybersecurity. Each domain reflects my current study priorities and hands-on practice efforts.</p>
-                        <div class="category-list">
-                            <span class="category-tag">SecOps</span>
-                            <span class="category-tag">Incident Response</span>
-                            <span class="category-tag">Malware Analysis</span>
-                            <span class="category-tag">Pen Testing</span>
-                            <span class="category-tag">Exploitation</span>
-                            <span class="category-tag">Red Teaming</span>
-                        </div>
-                        <div class="matrix-stats">
-                            <div class="stat">> ACTIVE_NODES: 6</div>
-                            <div class="stat">> SCAN_DEPTH: 85%</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- TECHNICAL SKILLS SECTION - WITH SEGMENTED BARS -->
-    <section id="tech-skills" class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">[ TECHNICAL SKILLS ]</h2>
-                <div class="header-line"></div>
-                <div class="section-subtitle">> system_metrics --display</div>
-            </div>
-            
-            <div class="skills-categories">
-                <!-- Programming & Web Development -->
-                <div class="skill-category">
-                    <h3 class="category-title">
-                        <i class="fas fa-code"></i>
-                        Programming & Web Development
-                    </h3>
-                    <div class="skill-items">
-                        <div class="skill-item" data-skill="HTML" data-percent="50">
-                            <div class="skill-info">
-                                <span class="skill-name">HTML</span>
-                                <span class="skill-percent">50%</span>
-                            </div>
-                            <div class="segmented-bar">
-                                <div class="segment-fill" style="width: 50%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item" data-skill="CSS" data-percent="25">
-                            <div class="skill-info">
-                                <span class="skill-name">CSS</span>
-                                <span class="skill-percent">25%</span>
-                            </div>
-                            <div class="segmented-bar">
-                                <div class="segment-fill" style="width: 25%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item" data-skill="JavaScript" data-percent="25">
-                            <div class="skill-info">
-                                <span class="skill-name">JavaScript</span>
-                                <span class="skill-percent">25%</span>
-                            </div>
-                            <div class="segmented-bar">
-                                <div class="segment-fill" style="width: 25%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item" data-skill="Python" data-percent="50">
-                            <div class="skill-info">
-                                <span class="skill-name">Python</span>
-                                <span class="skill-percent">50%</span>
-                            </div>
-                            <div class="segmented-bar">
-                                <div class="segment-fill" style="width: 50%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item" data-skill="SQL" data-percent="50">
-                            <div class="skill-info">
-                                <span class="skill-name">SQL</span>
-                                <span class="skill-percent">50%</span>
-                            </div>
-                            <div class="segmented-bar">
-                                <div class="segment-fill" style="width: 50%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Cybersecurity Tools -->
-                <div class="skill-category">
-                    <h3 class="category-title">
+ 
+        <div class="certs-grid">
+            <div class="cert-card">
+                <div class="cert-glow"></div>
+                <div class="cert-top">
+                    <div class="cert-icon-wrap thm-color">
                         <i class="fas fa-shield-alt"></i>
-                        Cybersecurity Tools
-                    </h3>
-                    <div class="skill-items">
-                        <div class="skill-item" data-skill="Kali Linux" data-percent="20">
-                            <div class="skill-info">
-                                <span class="skill-name">Kali Linux</span>
-                                <span class="skill-percent">20%</span>
-                            </div>
-                            <div class="segmented-bar">
-                                <div class="segment-fill" style="width: 20%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item" data-skill="Wireshark" data-percent="20">
-                            <div class="skill-info">
-                                <span class="skill-name">Wireshark</span>
-                                <span class="skill-percent">20%</span>
-                            </div>
-                            <div class="segmented-bar">
-                                <div class="segment-fill" style="width: 20%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item" data-skill="Burp Suite" data-percent="20">
-                            <div class="skill-info">
-                                <span class="skill-name">Burp Suite</span>
-                                <span class="skill-percent">20%</span>
-                            </div>
-                            <div class="segmented-bar">
-                                <div class="segment-fill" style="width: 20%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item" data-skill="Nmap" data-percent="25">
-                            <div class="skill-info">
-                                <span class="skill-name">Nmap</span>
-                                <span class="skill-percent">25%</span>
-                            </div>
-                            <div class="segmented-bar">
-                                <div class="segment-fill" style="width: 25%"></div>
-                            </div>
-                        </div>
                     </div>
-                    <div class="category-footer">> active_tools: 4 | updates_available: 0</div>
+                    <div class="cert-verified">
+                        <i class="fas fa-check-circle"></i> VERIFIED
+                    </div>
                 </div>
-                
-                <!-- Development Tools -->
-                <div class="skill-category">
-                    <h3 class="category-title">
-                        <i class="fas fa-tools"></i>
-                        Development Tools
-                    </h3>
-                    <div class="skill-items">
-                        <div class="skill-item" data-skill="Git & GitHub" data-percent="50">
-                            <div class="skill-info">
-                                <span class="skill-name">Git & GitHub</span>
-                                <span class="skill-percent">50%</span>
-                            </div>
-                            <div class="segmented-bar">
-                                <div class="segment-fill" style="width: 50%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item" data-skill="VS Code" data-percent="25">
-                            <div class="skill-info">
-                                <span class="skill-name">VS Code</span>
-                                <span class="skill-percent">25%</span>
-                            </div>
-                            <div class="segmented-bar">
-                                <div class="segment-fill" style="width: 25%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item" data-skill="Linux Commands" data-percent="25">
-                            <div class="skill-info">
-                                <span class="skill-name">Linux Commands</span>
-                                <span class="skill-percent">25%</span>
-                            </div>
-                            <div class="segmented-bar">
-                                <div class="segment-fill" style="width: 25%"></div>
-                            </div>
-                        </div>
-                    </div>
+                <h3>Pre Security</h3>
+                <p class="cert-issuer">TryHackMe</p>
+                <p class="cert-desc">Covers networking fundamentals, web security basics, and Linux essentials as a foundation for cybersecurity practice.</p>
+                <div class="cert-footer">
+                    <span class="cert-date">2025</span>
+                    <a href="#" target="_blank" class="cert-link">Verify ↗</a>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- CERTIFICATIONS SECTION -->
-    <section id="certifications" class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">[ CERTIFICATIONS ]</h2>
-                <div class="header-line"></div>
-                <div class="section-subtitle">> verified_credentials --list</div>
+ 
+            <div class="cert-card">
+                <div class="cert-glow"></div>
+                <div class="cert-top">
+                    <div class="cert-icon-wrap thm-color">
+                        <i class="fas fa-skull-crossbones"></i>
+                    </div>
+                    <div class="cert-verified">
+                        <i class="fas fa-check-circle"></i> VERIFIED
+                    </div>
+                </div>
+                <h3>Cybersecurity 101</h3>
+                <p class="cert-issuer">TryHackMe</p>
+                <p class="cert-desc">Hands-on introduction to core cybersecurity concepts including threat analysis, defense mechanisms, and attacker methodologies.</p>
+                <div class="cert-footer">
+                    <span class="cert-date">2025</span>
+                    <a href="#" target="_blank" class="cert-link">Verify ↗</a>
+                </div>
             </div>
-            
-            <div class="certs-grid">
-                <!-- Pre Security - TryHackMe -->
-                <div class="cert-card">
-                    <div class="cert-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <div class="cert-content">
-                        <h3>Pre Security</h3>
-                        <p class="cert-platform">TryHackMe</p>
-                        <a href="#" class="verify-btn" target="_blank">
-                            <i class="fas fa-check-circle"></i> VERIFY
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Cybersecurity 101 - TryHackMe -->
-                <div class="cert-card">
-                    <div class="cert-icon">
-                        <i class="fas fa-skull"></i>
-                    </div>
-                    <div class="cert-content">
-                        <h3>Cybersecurity 101</h3>
-                        <p class="cert-platform">TryHackMe</p>
-                        <a href="#" class="verify-btn" target="_blank">
-                            <i class="fas fa-check-circle"></i> VERIFY
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Ethical Hacking with Kali Linux - IBM/Coursera -->
-                <div class="cert-card">
-                    <div class="cert-icon">
+ 
+            <div class="cert-card">
+                <div class="cert-glow"></div>
+                <div class="cert-top">
+                    <div class="cert-icon-wrap ibm-color">
                         <i class="fab fa-linux"></i>
                     </div>
-                    <div class="cert-content">
-                        <h3>Ethical Hacking with Kali Linux</h3>
-                        <p class="cert-platform">IBM · Coursera</p>
-                        <a href="https://www.coursera.org/account/accomplishments/verify/OQ3XLPTZQCGZ" target="_blank" class="verify-btn">
-                            <i class="fas fa-check-circle"></i> VERIFY
-                        </a>
+                    <div class="cert-verified">
+                        <i class="fas fa-check-circle"></i> VERIFIED
                     </div>
                 </div>
-                
-                <!-- Networking - NVIDIA/Coursera -->
-                <div class="cert-card">
-                    <div class="cert-icon">
+                <h3>Ethical Hacking with Kali Linux</h3>
+                <p class="cert-issuer">IBM · Coursera</p>
+                <p class="cert-desc">Practical course covering penetration testing methodology, Kali Linux tools, and ethical hacking techniques for real-world engagements.</p>
+                <div class="cert-footer">
+                    <span class="cert-date">2025</span>
+                    <a href="https://www.coursera.org/account/accomplishments/verify/OQ3XLPTZQCGZ" target="_blank" class="cert-link">Verify ↗</a>
+                </div>
+            </div>
+ 
+            <div class="cert-card">
+                <div class="cert-glow"></div>
+                <div class="cert-top">
+                    <div class="cert-icon-wrap nvidia-color">
                         <i class="fas fa-network-wired"></i>
                     </div>
-                    <div class="cert-content">
-                        <h3>Networking Fundamentals</h3>
-                        <p class="cert-platform">NVIDIA · Coursera</p>
-                        <a href="https://www.coursera.org/account/accomplishments/verify/M9HGTKY7RSUU" target="_blank" class="verify-btn">
-                            <i class="fas fa-check-circle"></i> VERIFY
-                        </a>
+                    <div class="cert-verified">
+                        <i class="fas fa-check-circle"></i> VERIFIED
+                    </div>
+                </div>
+                <h3>Networking Fundamentals</h3>
+                <p class="cert-issuer">NVIDIA · Coursera</p>
+                <p class="cert-desc">Deep dive into TCP/IP protocol suite, network architecture, routing, subnetting, and the fundamentals essential for network security work.</p>
+                <div class="cert-footer">
+                    <span class="cert-date">2025</span>
+                    <a href="https://www.coursera.org/account/accomplishments/verify/M9HGTKY7RSUU" target="_blank" class="cert-link">Verify ↗</a>
+                </div>
+            </div>
+        </div>
+ 
+        <div class="certs-roadmap">
+            <h3><i class="fas fa-road"></i> Certification Roadmap</h3>
+            <div class="roadmap-items">
+                <div class="roadmap-item done">
+                    <div class="roadmap-dot"></div>
+                    <span>THM Pre Security</span>
+                </div>
+                <div class="roadmap-line done"></div>
+                <div class="roadmap-item done">
+                    <div class="roadmap-dot"></div>
+                    <span>THM Cybersecurity 101</span>
+                </div>
+                <div class="roadmap-line done"></div>
+                <div class="roadmap-item active">
+                    <div class="roadmap-dot pulse"></div>
+                    <span>THM Jr Pentester</span>
+                </div>
+                <div class="roadmap-line"></div>
+                <div class="roadmap-item future">
+                    <div class="roadmap-dot"></div>
+                    <span>CompTIA Security+</span>
+                </div>
+                <div class="roadmap-line"></div>
+                <div class="roadmap-item future">
+                    <div class="roadmap-dot"></div>
+                    <span>eJPT</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+ 
+<!-- ==================== CONTACT ==================== -->
+<section id="contact" class="section">
+    <div class="container">
+        <div class="section-head">
+            <span class="section-tag">> ssh ahad@connect.io</span>
+            <h2 class="section-title">Get In Touch</h2>
+        </div>
+ 
+        <div class="contact-layout">
+            <div class="contact-info">
+                <p class="contact-intro">I'm always open to connecting with fellow security enthusiasts, mentors, and potential collaborators. Whether it's about CTFs, research, or internship opportunities — reach out.</p>
+                
+                <div class="contact-links">
+                    <a href="mailto:ahad.shaikh@somaiya.edu" class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <span class="contact-label">Email</span>
+                            <span class="contact-val">ahad.shaikh@somaiya.edu</span>
+                        </div>
+                        <span class="contact-arrow">→</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ahad-shaikh-747625279/" target="_blank" class="contact-item">
+                        <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
+                        <div>
+                            <span class="contact-label">LinkedIn</span>
+                            <span class="contact-val">ahad-shaikh-747625279</span>
+                        </div>
+                        <span class="contact-arrow">→</span>
+                    </a>
+                    <a href="https://github.com/AhadShaikh12" target="_blank" class="contact-item">
+                        <div class="contact-icon"><i class="fab fa-github"></i></div>
+                        <div>
+                            <span class="contact-label">GitHub</span>
+                            <span class="contact-val">github.com/AhadShaikh12</span>
+                        </div>
+                        <span class="contact-arrow">→</span>
+                    </a>
+                    <a href="https://tryhackme.com/p/AhadShk" target="_blank" class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-flag"></i></div>
+                        <div>
+                            <span class="contact-label">TryHackMe</span>
+                            <span class="contact-val">tryhackme.com/p/AhadShk</span>
+                        </div>
+                        <span class="contact-arrow">→</span>
+                    </a>
+                </div>
+ 
+                <a href="assets/Resume.pdf" class="btn btn-primary resume-btn" download>
+                    <i class="fas fa-download"></i> Download Full Resume
+                </a>
+            </div>
+ 
+            <div class="contact-terminal">
+                <div class="terminal-window">
+                    <div class="terminal-bar">
+                        <span class="t-dot red"></span>
+                        <span class="t-dot yellow"></span>
+                        <span class="t-dot green"></span>
+                        <span class="t-title">contact.sh</span>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">./contact.sh --init</span></div>
+                        <div class="t-line out">> Establishing secure connection...</div>
+                        <div class="t-line out success">> Channel encrypted [AES-256-GCM]</div>
+                        <div class="t-line out">> ahad@connect ready</div>
+                        <div class="t-line">&nbsp;</div>
+                        <div class="t-line out">Looking for:</div>
+                        <div class="t-line out success">✓ Cybersecurity internships</div>
+                        <div class="t-line out success">✓ CTF teammates</div>
+                        <div class="t-line out success">✓ Open source collaboration</div>
+                        <div class="t-line out success">✓ Mentorship opportunities</div>
+                        <div class="t-line out success">✓ Security research discussions</div>
+                        <div class="t-line">&nbsp;</div>
+                        <div class="t-line"><span class="t-prompt">$</span> <span class="t-cmd blink">_</span></div>
                     </div>
                 </div>
             </div>
-            <div class="certs-footer">> total_credentials: 4 | last_updated: 2025-02-13</div>
         </div>
-    </section>
-
-    <!-- TRYHACKME BADGE SECTION - FIXED CONTAINER -->
-    <section id="badge" class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">[ TRYHACKME BADGE ]</h2>
-                <div class="header-line"></div>
-                <div class="section-subtitle">> fetching_live_data --thm-profile</div>
-            </div>
-            
-            <div class="badge-card">
-                <div class="badge-header">
-                    <i class="fas fa-shield-hal tryhackme-icon"></i>
-                    <span class="badge-title">TRYHACKME PROFILE</span>
-                    <span class="badge-subtitle">Auto-updates when rooms are completed</span>
-                </div>
-                
-                <div class="badge-iframe-wrapper">
-                    <div class="badge-iframe-container">
-                        <iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=4949717" style="border:none;" title="TryHackMe Badges" scrolling="no" frameborder="0"></iframe>
-                    </div>
-                </div>
-                
-                <div class="badge-footer">
-                    <span class="badge-status">> STATUS: LIVE</span>
-                    <span class="badge-update">> LAST_SYNC: 2025-02-13</span>
-                </div>
-            </div>
+    </div>
+</section>
+ 
+<!-- FOOTER -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-logo">
+            <span class="logo-bracket">[</span>
+            <span class="logo-text">AHAD.SH</span>
+            <span class="logo-bracket">]</span>
         </div>
-    </section>
-
-    <!-- CONNECT SECTION - SINGLE CARD -->
-    <section id="connect" class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">[ CONNECT ]</h2>
-                <div class="header-line"></div>
-                <div class="section-subtitle">> establishing_secure_channel</div>
-            </div>
-            
-            <div class="connect-card">
-                <div class="connect-header">
-                    <i class="fas fa-terminal"></i>
-                    <span>ahad@connect:~$</span>
-                </div>
-                
-                <div class="connect-links">
-                    <a href="mailto:ahad.shaikh@somaiya.edu" class="connect-link">
-                        <i class="fas fa-envelope"></i>
-                        <span>ahad.shaikh@somaiya.edu</span>
-                        <span class="link-status">[ACTIVE]</span>
-                    </a>
-                    
-                    <a href="https://www.linkedin.com/in/ahad-shaikh-747625279/" target="_blank" class="connect-link">
-                        <i class="fab fa-linkedin"></i>
-                        <span>linkedin.com/in/ahad-shaikh</span>
-                        <span class="link-status">[ONLINE]</span>
-                    </a>
-                    
-                    <a href="https://github.com/AhadShaikh12" target="_blank" class="connect-link">
-                        <i class="fab fa-github"></i>
-                        <span>github.com/AhadShaikh12</span>
-                        <span class="link-status">[ACTIVE]</span>
-                    </a>
-                    
-                    <a href="https://tryhackme.com/p/AhadShk" target="_blank" class="connect-link">
-                        <i class="fas fa-shield-hal"></i>
-                        <span>tryhackme.com/p/AhadShk</span>
-                        <span class="link-status">[ONLINE]</span>
-                    </a>
-                </div>
-                
-                <div class="connect-footer">
-                    <span class="encryption">● SECURE CONNECTION (AES-256)</span>
-                    <span class="connection-id">SESSION: 0x8F3A_2B4D</span>
-                </div>
-            </div>
+        <p class="footer-tagline">Breaking things ethically since 2024.</p>
+        <div class="footer-links">
+            <a href="https://github.com/AhadShaikh12" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/ahad-shaikh-747625279/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://tryhackme.com/p/AhadShk" target="_blank"><i class="fas fa-flag"></i></a>
+            <a href="mailto:ahad.shaikh@somaiya.edu"><i class="fas fa-envelope"></i></a>
         </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-        <div class="footer-content">
-            <div class="social-icons">
-                <a href="https://github.com/AhadShaikh12" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/ahad-shaikh-747625279/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://tryhackme.com/p/AhadShk" target="_blank"><i class="fas fa-shield-hal"></i></a>
-            </div>
-            <div class="copyright">
-                © 2025 Ahad Shaikh. All rights reserved.
-            </div>
-            <div class="footer-terminal">
-                <span></span>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+        <p class="footer-copy">© 2025 Ahad Shaikh · Built with curiosity and caffeine</p>
+    </div>
+</footer>
+ 
+<script src="script.js"></script>
 </body>
 </html>
