@@ -208,3 +208,33 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 });
+
+// ---- CERTIFICATE MODAL ----
+function openCertModal(pdfPath, title) {
+    const modal = document.getElementById('certModal');
+    const frame = document.getElementById('certModalFrame');
+    const titleEl = document.getElementById('certModalTitle');
+    titleEl.textContent = title;
+    frame.src = pdfPath;
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeCertModal(event) {
+    if (event && event.target !== document.getElementById('certModal') && !event.target.classList.contains('cert-modal-close') && !event.target.closest('.cert-modal-close')) return;
+    const modal = document.getElementById('certModal');
+    modal.classList.remove('open');
+    document.getElementById('certModalFrame').src = '';
+    document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        const modal = document.getElementById('certModal');
+        if (modal.classList.contains('open')) {
+            modal.classList.remove('open');
+            document.getElementById('certModalFrame').src = '';
+            document.body.style.overflow = '';
+        }
+    }
+});

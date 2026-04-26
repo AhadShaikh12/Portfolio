@@ -641,6 +641,13 @@ canvas#matrixCanvas {
     gap: 1.5rem;
 }
 
+/* 2-card layout — centered */
+.projects-grid.projects-grid-small {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
 .project-card {
     background: var(--bg2);
     border: 1px solid var(--border);
@@ -850,6 +857,26 @@ canvas#matrixCanvas {
     background: var(--bg3);
     color: var(--text2);
 }
+.room-tag.room-tag-active {
+    background: rgba(255,201,71,0.1);
+    color: var(--warn);
+    border: 1px solid rgba(255,201,71,0.3);
+    animation: pulseDot 2s infinite;
+}
+.rooms-total-note {
+    margin-top: 6px;
+    padding-top: 10px;
+    border-top: 1px solid var(--border);
+}
+.rooms-total-note .room-name {
+    font-size: 0.72rem;
+    color: var(--accent);
+    font-style: italic;
+}
+.room-icon.rooms-count {
+    background: rgba(0,229,160,0.1);
+    color: var(--accent);
+}
 
 .labs-right {
     display: flex;
@@ -941,6 +968,17 @@ canvas#matrixCanvas {
     box-shadow: 0 12px 40px rgba(0,0,0,0.3);
 }
 
+/* Pending/Coming Soon cert styling */
+.cert-card.cert-pending {
+    opacity: 0.75;
+    border-style: dashed;
+    border-color: rgba(255,201,71,0.25);
+}
+.cert-card.cert-pending:hover {
+    border-color: rgba(255,201,71,0.5);
+    opacity: 1;
+}
+
 .cert-glow {
     position: absolute;
     top: -40px; right: -40px;
@@ -951,7 +989,6 @@ canvas#matrixCanvas {
     pointer-events: none;
 }
 .cert-card:hover .cert-glow { opacity: 1; }
-.thm-color + .cert-glow, .thm-color ~ .cert-glow { display: none; } /* handled differently */
 
 .cert-top {
     display: flex;
@@ -967,6 +1004,8 @@ canvas#matrixCanvas {
 .cert-icon-wrap.thm-color { background: rgba(0,229,160,0.12); color: var(--accent); }
 .cert-icon-wrap.ibm-color { background: rgba(0,120,255,0.12); color: #0078ff; }
 .cert-icon-wrap.nvidia-color { background: rgba(118,185,0,0.12); color: #76b900; }
+.cert-icon-wrap.warn-color { background: rgba(255,201,71,0.12); color: var(--warn); }
+.cert-icon-wrap.pending-color { background: rgba(255,201,71,0.08); color: rgba(255,201,71,0.5); }
 
 .cert-verified {
     font-size: 0.62rem;
@@ -974,6 +1013,15 @@ canvas#matrixCanvas {
     display: flex;
     align-items: center;
     gap: 4px;
+}
+
+.cert-coming-soon {
+    font-size: 0.62rem;
+    color: var(--warn);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    opacity: 0.8;
 }
 
 .cert-card h3 {
@@ -1009,6 +1057,108 @@ canvas#matrixCanvas {
 }
 .cert-link:hover { opacity: 0.7; }
 
+/* View cert button (looks like a link, acts as button) */
+.cert-view-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-mono);
+    padding: 0;
+    font-size: 0.72rem;
+    color: var(--accent);
+    transition: opacity 0.2s;
+}
+.cert-view-btn:hover { opacity: 0.7; }
+
+.cert-pending-label {
+    font-size: 0.62rem;
+    color: rgba(255,201,71,0.5);
+    font-style: italic;
+}
+
+/* ===========================
+   CERTIFICATE MODAL
+=========================== */
+.cert-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(7, 11, 16, 0.92);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    backdrop-filter: blur(8px);
+    padding: 20px;
+}
+.cert-modal.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.cert-modal-inner {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    width: 100%;
+    max-width: 900px;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.6), 0 0 40px rgba(0,229,160,0.06);
+}
+
+.cert-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    background: var(--bg3);
+    border-bottom: 1px solid var(--border);
+    flex-shrink: 0;
+}
+
+.cert-modal-title {
+    font-size: 0.8rem;
+    color: var(--accent);
+    font-family: var(--font-mono);
+    letter-spacing: 1px;
+}
+
+.cert-modal-close {
+    background: none;
+    border: none;
+    color: var(--text2);
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: all 0.2s;
+    font-family: var(--font-mono);
+}
+.cert-modal-close:hover {
+    color: var(--danger);
+    background: rgba(255,71,87,0.1);
+}
+
+.cert-modal-body {
+    flex: 1;
+    overflow: hidden;
+}
+
+.cert-modal-body iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: var(--bg);
+}
+
+/* ===========================
+   CERTIFICATIONS ROADMAP
+=========================== */
 .certs-roadmap {
     background: var(--bg2);
     border: 1px solid var(--border);
@@ -1031,7 +1181,6 @@ canvas#matrixCanvas {
 .roadmap-items {
     display: flex;
     align-items: center;
-    gap: 0;
     flex-wrap: wrap;
     gap: 4px;
 }
@@ -1242,6 +1391,7 @@ footer {
 
     .hero-name { font-size: 3rem; }
     .projects-grid { grid-template-columns: 1fr; }
+    .projects-grid.projects-grid-small { grid-template-columns: 1fr; max-width: 100%; }
     .skills-grid { grid-template-columns: 1fr; }
     .labs-layout { grid-template-columns: 1fr; }
     .contact-layout { grid-template-columns: 1fr; }
@@ -1249,6 +1399,8 @@ footer {
     .roadmap-items { overflow-x: auto; padding-bottom: 8px; }
     .hero-stats { width: 100%; }
     .stat-item { padding: 12px 16px; flex: 1; }
+
+    .cert-modal-inner { height: 90vh; }
 }
 
 @media (max-width: 480px) {
@@ -1257,4 +1409,5 @@ footer {
     .section-title { font-size: 1.8rem; }
     .hero-actions { flex-direction: column; }
     .hero-actions .btn { width: 100%; justify-content: center; }
+    .cert-modal { padding: 10px; }
 }

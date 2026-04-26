@@ -1,6 +1,3 @@
-Index · HTML
-Copy
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +12,7 @@ Copy
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
- 
+
 <!-- PRELOADER -->
 <div class="preloader" id="preloader">
     <div class="preloader-inner">
@@ -33,15 +30,15 @@ Copy
         </div>
     </div>
 </div>
- 
+
 <!-- NOISE OVERLAY -->
 <div class="noise-overlay"></div>
- 
+
 <!-- SCROLL TO TOP -->
 <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
     <i class="fas fa-arrow-up"></i>
 </button>
- 
+
 <!-- NAVBAR -->
 <nav id="navbar">
     <div class="nav-inner">
@@ -64,7 +61,7 @@ Copy
         </button>
     </div>
 </nav>
- 
+
 <!-- ==================== HERO ==================== -->
 <section id="home" class="hero">
     <canvas id="matrixCanvas"></canvas>
@@ -83,16 +80,16 @@ Copy
             BCA Cybersecurity student at Somaiya Vidyavihar University, building hands-on expertise in ethical hacking, network analysis, and digital forensics. I break things to understand how to fix them.
         </p>
         <div class="hero-actions">
-            <a href="assets/Resume.pdf" class="btn btn-primary" download>
-                <i class="fas fa-download"></i> Download Resume
-            </a>
-            <a href="#projects" class="btn btn-outline">
+            <a href="#projects" class="btn btn-primary">
                 <i class="fas fa-terminal"></i> View Projects
+            </a>
+            <a href="#contact" class="btn btn-outline">
+                <i class="fas fa-envelope"></i> Get In Touch
             </a>
         </div>
         <div class="hero-stats">
             <div class="stat-item">
-                <span class="stat-num" data-count="10">0</span>
+                <span class="stat-num" data-count="100">0</span>
                 <span class="stat-label">THM Rooms</span>
             </div>
             <div class="stat-divider"></div>
@@ -102,7 +99,7 @@ Copy
             </div>
             <div class="stat-divider"></div>
             <div class="stat-item">
-                <span class="stat-num" data-count="6">0</span>
+                <span class="stat-num" data-count="1">0</span>
                 <span class="stat-label">Projects</span>
             </div>
         </div>
@@ -128,7 +125,7 @@ Copy
         </div>
     </div>
 </section>
- 
+
 <!-- ==================== ABOUT ==================== -->
 <section id="about" class="section">
     <div class="container">
@@ -136,13 +133,20 @@ Copy
             <span class="section-tag">> cat about.md</span>
             <h2 class="section-title">About Me</h2>
         </div>
- 
+
         <div class="about-grid">
             <div class="about-text">
                 <p class="about-intro">I'm a cybersecurity student with a hacker's mindset — I believe the best defenders are those who think like attackers.</p>
-                <p>Currently pursuing a BCA in Cybersecurity at Somaiya Vidyavihar University, I spend my free time breaking into intentionally vulnerable machines on TryHackMe, analyzing network traffic with Wireshark, and studying real-world CVEs to understand how attackers think.</p>
-                <p>My approach to cybersecurity is methodical: understand the attack surface, enumerate carefully, exploit precisely, and document everything. I'm particularly drawn to web application security, network forensics, and the science of malware behavior.</p>
+                <p>Currently pursuing a BCA in Cybersecurity at Somaiya Vidyavihar University, I've been actively practicing on TryHackMe from home for over a year — completing 100+ rooms, sharpening my skills in real lab environments, and learning by actually doing, not just reading.</p>
+                <p>I'm a cybersecurity enthusiast who's always chasing the next learning opportunity — whether that's grinding through new TryHackMe rooms, exploring attack techniques, or leveling up toward becoming a SOC Analyst. The learning never stops.</p>
                 <div class="about-highlights">
+                    <div class="highlight-item">
+                        <i class="fas fa-eye"></i>
+                        <div>
+                            <strong>SOC Focus</strong>
+                            <span>Building skills in threat detection, log analysis, and security monitoring</span>
+                        </div>
+                    </div>
                     <div class="highlight-item">
                         <i class="fas fa-crosshairs"></i>
                         <div>
@@ -157,16 +161,9 @@ Copy
                             <span>Hands-on practice over theory-only studying</span>
                         </div>
                     </div>
-                    <div class="highlight-item">
-                        <i class="fas fa-file-alt"></i>
-                        <div>
-                            <strong>Documentation</strong>
-                            <span>Detailed write-ups for every lab and finding</span>
-                        </div>
-                    </div>
                 </div>
             </div>
- 
+
             <div class="about-card">
                 <div class="card-header">
                     <i class="fas fa-id-card"></i> profile.json
@@ -195,7 +192,12 @@ Copy
                     <div class="info-line">
                         <span class="info-key">"focus"</span>
                         <span class="info-colon">:</span>
-                        <span class="info-val array">["Pen Testing", "Web Security", "Network Analysis"]</span>
+                        <span class="info-val array">["SOC Analyst", "Pen Testing", "Web Security"]</span>
+                    </div>
+                    <div class="info-line">
+                        <span class="info-key">"thm_practice"</span>
+                        <span class="info-colon">:</span>
+                        <span class="info-val string">"1+ year, 100+ rooms"</span>
                     </div>
                     <div class="info-line">
                         <span class="info-key">"status"</span>
@@ -212,7 +214,7 @@ Copy
         </div>
     </div>
 </section>
- 
+
 <!-- ==================== SKILLS ==================== -->
 <section id="skills" class="section">
     <div class="container">
@@ -220,7 +222,7 @@ Copy
             <span class="section-tag">> ls -la skills/</span>
             <h2 class="section-title">Technical Skills</h2>
         </div>
- 
+
         <div class="skills-grid">
             <!-- Security Tools -->
             <div class="skill-block">
@@ -256,7 +258,7 @@ Copy
                     </div>
                 </div>
             </div>
- 
+
             <!-- Programming -->
             <div class="skill-block">
                 <div class="skill-block-header">
@@ -291,7 +293,7 @@ Copy
                     </div>
                 </div>
             </div>
- 
+
             <!-- Concepts -->
             <div class="skill-block full-width">
                 <div class="skill-block-header">
@@ -319,7 +321,7 @@ Copy
         </div>
     </div>
 </section>
- 
+
 <!-- ==================== PROJECTS ==================== -->
 <section id="projects" class="section">
     <div class="container">
@@ -327,211 +329,79 @@ Copy
             <span class="section-tag">> git log --oneline projects/</span>
             <h2 class="section-title">Security Projects</h2>
         </div>
- 
-        <div class="projects-grid">
- 
-            <!-- Project 1 -->
+
+        <div class="projects-grid projects-grid-small">
+
+            <!-- Project 1: Traffic Violation System -->
             <div class="project-card" data-category="network">
                 <div class="project-header">
                     <div class="project-id">01</div>
-                    <div class="project-status online">DOCUMENTED</div>
+                    <div class="project-status online">LIVE</div>
                 </div>
-                <h3 class="project-title">Network Traffic Analysis — Detecting ARP Poisoning</h3>
-                <p class="project-desc">Captured and analyzed network packets in a controlled lab environment to identify ARP poisoning indicators. Used Wireshark filters to isolate malicious traffic patterns and documented the attack signature.</p>
-                <div class="project-tools">
-                    <span>Wireshark</span>
-                    <span>VirtualBox</span>
-                    <span>Kali Linux</span>
-                    <span>ARP Protocol</span>
-                </div>
-                <div class="project-findings">
-                    <div class="finding-item">
-                        <i class="fas fa-search"></i>
-                        Identified duplicate ARP replies from non-gateway MAC
-                    </div>
-                    <div class="finding-item">
-                        <i class="fas fa-exclamation-triangle"></i>
-                        Captured cleartext HTTP credentials via MITM position
-                    </div>
-                    <div class="finding-item">
-                        <i class="fas fa-check"></i>
-                        Documented 3 detection signatures for SOC use
-                    </div>
-                </div>
-                <a href="https://github.com/AhadShaikh12" class="project-link" target="_blank">
-                    <i class="fab fa-github"></i> View Write-up
-                </a>
-            </div>
- 
-            <!-- Project 2 -->
-            <div class="project-card" data-category="web">
-                <div class="project-header">
-                    <div class="project-id">02</div>
-                    <div class="project-status online">DOCUMENTED</div>
-                </div>
-                <h3 class="project-title">Web App Vulnerability Scanner — DVWA Lab</h3>
-                <p class="project-desc">Conducted manual and automated vulnerability assessment on DVWA (Damn Vulnerable Web Application). Identified, exploited, and documented SQL injection, XSS, and CSRF vulnerabilities following OWASP methodology.</p>
-                <div class="project-tools">
-                    <span>Burp Suite</span>
-                    <span>DVWA</span>
-                    <span>Python</span>
-                    <span>OWASP ZAP</span>
-                </div>
-                <div class="project-findings">
-                    <div class="finding-item">
-                        <i class="fas fa-search"></i>
-                        Found 8 critical/high vulnerabilities across OWASP Top 10
-                    </div>
-                    <div class="finding-item">
-                        <i class="fas fa-exclamation-triangle"></i>
-                        Demonstrated SQLi to extract user credentials from DB
-                    </div>
-                    <div class="finding-item">
-                        <i class="fas fa-check"></i>
-                        Wrote remediation report with patch recommendations
-                    </div>
-                </div>
-                <a href="https://github.com/AhadShaikh12" class="project-link" target="_blank">
-                    <i class="fab fa-github"></i> View Write-up
-                </a>
-            </div>
- 
-            <!-- Project 3 -->
-            <div class="project-card" data-category="recon">
-                <div class="project-header">
-                    <div class="project-id">03</div>
-                    <div class="project-status online">DOCUMENTED</div>
-                </div>
-                <h3 class="project-title">OSINT Reconnaissance Framework — Target Profiling</h3>
-                <p class="project-desc">Built a structured OSINT methodology for passive reconnaissance. Gathered organizational intelligence using public sources — subdomains, employee profiles, exposed services — to map the attack surface of a test target.</p>
-                <div class="project-tools">
-                    <span>theHarvester</span>
-                    <span>Shodan</span>
-                    <span>Maltego</span>
-                    <span>Google Dorks</span>
-                </div>
-                <div class="project-findings">
-                    <div class="finding-item">
-                        <i class="fas fa-search"></i>
-                        Discovered 12 exposed subdomains via passive DNS
-                    </div>
-                    <div class="finding-item">
-                        <i class="fas fa-exclamation-triangle"></i>
-                        Found employee emails matching credential breach patterns
-                    </div>
-                    <div class="finding-item">
-                        <i class="fas fa-check"></i>
-                        Mapped full attack surface with risk scoring
-                    </div>
-                </div>
-                <a href="https://github.com/AhadShaikh12" class="project-link" target="_blank">
-                    <i class="fab fa-github"></i> View Write-up
-                </a>
-            </div>
- 
-            <!-- Project 4 -->
-            <div class="project-card" data-category="scripting">
-                <div class="project-header">
-                    <div class="project-id">04</div>
-                    <div class="project-status online">DOCUMENTED</div>
-                </div>
-                <h3 class="project-title">Python Port Scanner — Custom Recon Tool</h3>
-                <p class="project-desc">Developed a multi-threaded port scanner in Python capable of performing SYN scans, banner grabbing, and service version detection. Built to understand how professional scanners like Nmap function internally.</p>
+                <h3 class="project-title">Traffic Violation System</h3>
+                <p class="project-desc">A system designed to detect and manage traffic violations. Built to understand how automated enforcement systems work and the security considerations around traffic monitoring infrastructure.</p>
                 <div class="project-tools">
                     <span>Python</span>
-                    <span>Sockets</span>
-                    <span>Threading</span>
-                    <span>Linux</span>
-                </div>
-                <div class="project-findings">
-                    <div class="finding-item">
-                        <i class="fas fa-search"></i>
-                        Scans 1–65535 ports with configurable thread count
-                    </div>
-                    <div class="finding-item">
-                        <i class="fas fa-check"></i>
-                        Performs banner grabbing for service fingerprinting
-                    </div>
-                    <div class="finding-item">
-                        <i class="fas fa-check"></i>
-                        Exports results to JSON for downstream analysis
-                    </div>
-                </div>
-                <a href="https://github.com/AhadShaikh12" class="project-link" target="_blank">
-                    <i class="fab fa-github"></i> View Code
-                </a>
-            </div>
- 
-            <!-- Project 5 -->
-            <div class="project-card" data-category="forensics">
-                <div class="project-header">
-                    <div class="project-id">05</div>
-                    <div class="project-status building">IN PROGRESS</div>
-                </div>
-                <h3 class="project-title">Log Analysis & Threat Hunting — Simulated SIEM</h3>
-                <p class="project-desc">Analyzed simulated Windows and Apache access logs to identify indicators of compromise (IoCs). Practiced threat hunting techniques by correlating events across multiple log sources to reconstruct an attack timeline.</p>
-                <div class="project-tools">
-                    <span>Splunk (Free)</span>
-                    <span>Python</span>
-                    <span>RegEx</span>
-                    <span>Bash</span>
-                </div>
-                <div class="project-findings">
-                    <div class="finding-item">
-                        <i class="fas fa-search"></i>
-                        Detected brute-force pattern from failed auth events
-                    </div>
-                    <div class="finding-item">
-                        <i class="fas fa-exclamation-triangle"></i>
-                        Identified C2 beacon pattern via HTTP timing analysis
-                    </div>
-                    <div class="finding-item">
-                        <i class="fas fa-check"></i>
-                        Built 5 custom detection queries/alerts
-                    </div>
-                </div>
-                <a href="https://github.com/AhadShaikh12" class="project-link" target="_blank">
-                    <i class="fab fa-github"></i> View Write-up
-                </a>
-            </div>
- 
-            <!-- Project 6 -->
-            <div class="project-card" data-category="web">
-                <div class="project-header">
-                    <div class="project-id">06</div>
-                    <div class="project-status building">IN PROGRESS</div>
-                </div>
-                <h3 class="project-title">CTF Write-ups — Documenting My Hacking Journey</h3>
-                <p class="project-desc">A growing collection of detailed CTF and TryHackMe room write-ups documenting my methodology, tools, and thought process. Organized by category: Web, Crypto, Forensics, Network, and Privilege Escalation.</p>
-                <div class="project-tools">
-                    <span>TryHackMe</span>
-                    <span>Various Tools</span>
-                    <span>Markdown</span>
+                    <span>Database</span>
+                    <span>Computer Vision</span>
                     <span>GitHub</span>
                 </div>
                 <div class="project-findings">
                     <div class="finding-item">
                         <i class="fas fa-check"></i>
-                        10+ rooms completed with full methodology notes
+                        Automated traffic violation detection and logging
                     </div>
                     <div class="finding-item">
                         <i class="fas fa-check"></i>
-                        Covers recon, exploitation, and post-exploitation
+                        Database-backed violation record management
                     </div>
                     <div class="finding-item">
-                        <i class="fas fa-check"></i>
-                        Publicly available for the security community
+                        <i class="fas fa-search"></i>
+                        Exploring security aspects of traffic monitoring systems
                     </div>
                 </div>
-                <a href="https://github.com/AhadShaikh12" class="project-link" target="_blank">
-                    <i class="fab fa-github"></i> View Write-ups
+                <a href="https://github.com/Tejas-Tholar/Traffic-Violation-System" class="project-link" target="_blank">
+                    <i class="fab fa-github"></i> View on GitHub
                 </a>
             </div>
- 
+
+            <!-- Project 2: SOC Analyst L1 Path (In Progress) -->
+            <div class="project-card" data-category="soc">
+                <div class="project-header">
+                    <div class="project-id">02</div>
+                    <div class="project-status building">IN PROGRESS</div>
+                </div>
+                <h3 class="project-title">SOC Analyst L1 — TryHackMe Learning Path</h3>
+                <p class="project-desc">Currently pursuing the SOC Analyst Level 1 path on TryHackMe — covering log analysis, SIEM fundamentals, threat detection, incident response workflows, and real-world blue team scenarios. Actively grinding every day.</p>
+                <div class="project-tools">
+                    <span>TryHackMe</span>
+                    <span>Splunk</span>
+                    <span>Wireshark</span>
+                    <span>SIEM</span>
+                </div>
+                <div class="project-findings">
+                    <div class="finding-item">
+                        <i class="fas fa-spinner"></i>
+                        Actively pursuing SOC Analyst L1 certification path
+                    </div>
+                    <div class="finding-item">
+                        <i class="fas fa-check"></i>
+                        100+ rooms completed across TryHackMe over 1+ year
+                    </div>
+                    <div class="finding-item">
+                        <i class="fas fa-flag"></i>
+                        Focused on threat detection, log analysis & blue team skills
+                    </div>
+                </div>
+                <a href="https://tryhackme.com/p/AhadShk" class="project-link" target="_blank">
+                    <i class="fas fa-flag"></i> View THM Profile
+                </a>
+            </div>
+
         </div>
     </div>
 </section>
- 
+
 <!-- ==================== LABS ==================== -->
 <section id="labs" class="section">
     <div class="container">
@@ -539,7 +409,7 @@ Copy
             <span class="section-tag">> ./run_labs.sh --list</span>
             <h2 class="section-title">Lab Practice & Platforms</h2>
         </div>
- 
+
         <div class="labs-layout">
             <div class="labs-left">
                 <div class="lab-platform-card thm">
@@ -582,13 +452,17 @@ Copy
                         </div>
                         <div class="room-item">
                             <span class="room-icon progress"><i class="fas fa-spinner"></i></span>
-                            <span class="room-name">Web Fundamentals</span>
-                            <span class="room-tag">Web</span>
+                            <span class="room-name">SOC Analyst L1 Path</span>
+                            <span class="room-tag room-tag-active">Currently Pursuing</span>
+                        </div>
+                        <div class="room-item rooms-total-note">
+                            <span class="room-icon rooms-count"><i class="fas fa-layer-group"></i></span>
+                            <span class="room-name">100+ rooms completed in 1+ year of home practice</span>
                         </div>
                     </div>
                 </div>
             </div>
- 
+
             <div class="labs-right">
                 <div class="lab-env-card">
                     <h3><i class="fas fa-server"></i> Home Lab Setup</h3>
@@ -612,10 +486,17 @@ Copy
                         </div>
                     </div>
                 </div>
- 
+
                 <div class="lab-study-card">
                     <h3><i class="fas fa-book-open"></i> Current Study Focus</h3>
                     <div class="study-items">
+                        <div class="study-item">
+                            <div class="study-bar-wrap">
+                                <span>SOC Analyst Skills</span>
+                                <span class="study-pct">60%</span>
+                            </div>
+                            <div class="study-bar"><div style="width:60%"></div></div>
+                        </div>
                         <div class="study-item">
                             <div class="study-bar-wrap">
                                 <span>Web App Pentesting</span>
@@ -637,20 +518,13 @@ Copy
                             </div>
                             <div class="study-bar"><div style="width:55%"></div></div>
                         </div>
-                        <div class="study-item">
-                            <div class="study-bar-wrap">
-                                <span>Linux Privilege Escalation</span>
-                                <span class="study-pct">30%</span>
-                            </div>
-                            <div class="study-bar"><div style="width:30%"></div></div>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
- 
+
 <!-- ==================== CERTIFICATIONS ==================== -->
 <section id="certifications" class="section">
     <div class="container">
@@ -658,8 +532,10 @@ Copy
             <span class="section-tag">> verify --credentials --all</span>
             <h2 class="section-title">Certifications</h2>
         </div>
- 
+
         <div class="certs-grid">
+
+            <!-- Cert 1: Pre Security -->
             <div class="cert-card">
                 <div class="cert-glow"></div>
                 <div class="cert-top">
@@ -675,10 +551,11 @@ Copy
                 <p class="cert-desc">Covers networking fundamentals, web security basics, and Linux essentials as a foundation for cybersecurity practice.</p>
                 <div class="cert-footer">
                     <span class="cert-date">2025</span>
-                    <a href="#" target="_blank" class="cert-link">Verify ↗</a>
+                    <button class="cert-link cert-view-btn" onclick="openCertModal('assets/pre-security.pdf', 'Pre Security — TryHackMe')">View Cert ↗</button>
                 </div>
             </div>
- 
+
+            <!-- Cert 2: Cybersecurity 101 -->
             <div class="cert-card">
                 <div class="cert-glow"></div>
                 <div class="cert-top">
@@ -691,32 +568,54 @@ Copy
                 </div>
                 <h3>Cybersecurity 101</h3>
                 <p class="cert-issuer">TryHackMe</p>
-                <p class="cert-desc">Hands-on introduction to core cybersecurity concepts including threat analysis, defense mechanisms, and attacker methodologies.</p>
+                <p class="cert-desc">Completed all the core basics of cybersecurity — threat analysis, defense mechanisms, and attacker methodologies through hands-on labs.</p>
                 <div class="cert-footer">
                     <span class="cert-date">2025</span>
-                    <a href="#" target="_blank" class="cert-link">Verify ↗</a>
+                    <button class="cert-link cert-view-btn" onclick="openCertModal('assets/Cybersecurity 101.pdf', 'Cybersecurity 101 — TryHackMe')">View Cert ↗</button>
                 </div>
             </div>
- 
+
+            <!-- Cert 3: Cryptography -->
             <div class="cert-card">
                 <div class="cert-glow"></div>
                 <div class="cert-top">
                     <div class="cert-icon-wrap ibm-color">
-                        <i class="fab fa-linux"></i>
+                        <i class="fas fa-lock"></i>
                     </div>
                     <div class="cert-verified">
                         <i class="fas fa-check-circle"></i> VERIFIED
                     </div>
                 </div>
-                <h3>Ethical Hacking with Kali Linux</h3>
-                <p class="cert-issuer">IBM · Coursera</p>
-                <p class="cert-desc">Practical course covering penetration testing methodology, Kali Linux tools, and ethical hacking techniques for real-world engagements.</p>
+                <h3>Cryptography</h3>
+                <p class="cert-issuer">TryHackMe</p>
+                <p class="cert-desc">In-depth understanding of cryptographic principles — encryption algorithms, hashing, PKI, and how cryptography underpins modern security.</p>
                 <div class="cert-footer">
                     <span class="cert-date">2025</span>
-                    <a href="https://www.coursera.org/account/accomplishments/verify/OQ3XLPTZQCGZ" target="_blank" class="cert-link">Verify ↗</a>
+                    <button class="cert-link cert-view-btn" onclick="openCertModal('assets/Cryptography.pdf', 'Cryptography — TryHackMe')">View Cert ↗</button>
                 </div>
             </div>
- 
+
+            <!-- Cert 4: Ethical Hacking with AI Training -->
+            <div class="cert-card">
+                <div class="cert-glow"></div>
+                <div class="cert-top">
+                    <div class="cert-icon-wrap warn-color">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="cert-verified">
+                        <i class="fas fa-check-circle"></i> VERIFIED
+                    </div>
+                </div>
+                <h3>Ethical Hacking with AI</h3>
+                <p class="cert-issuer">Internshala Training</p>
+                <p class="cert-desc">8-week intensive training on ethical hacking fundamentals combined with AI-driven security techniques — covering penetration testing, vulnerability assessment, and AI tools in security.</p>
+                <div class="cert-footer">
+                    <span class="cert-date">2025</span>
+                    <button class="cert-link cert-view-btn" onclick="openCertModal('assets/Ethical Hacking with AI Training.pdf', 'Ethical Hacking with AI — Internshala')">View Cert ↗</button>
+                </div>
+            </div>
+
+            <!-- Cert 5: Networking (NVIDIA) -->
             <div class="cert-card">
                 <div class="cert-glow"></div>
                 <div class="cert-top">
@@ -728,15 +627,56 @@ Copy
                     </div>
                 </div>
                 <h3>Networking Fundamentals</h3>
-                <p class="cert-issuer">NVIDIA · Coursera</p>
+                <p class="cert-issuer">NVIDIA</p>
                 <p class="cert-desc">Deep dive into TCP/IP protocol suite, network architecture, routing, subnetting, and the fundamentals essential for network security work.</p>
                 <div class="cert-footer">
                     <span class="cert-date">2025</span>
-                    <a href="https://www.coursera.org/account/accomplishments/verify/M9HGTKY7RSUU" target="_blank" class="cert-link">Verify ↗</a>
+                    <button class="cert-link cert-view-btn" onclick="openCertModal('assets/Networking.pdf', 'Networking Fundamentals — NVIDIA')">View Cert ↗</button>
                 </div>
             </div>
+
+            <!-- Cert 6: CompTIA Security+ (Coming Soon) -->
+            <div class="cert-card cert-pending">
+                <div class="cert-glow"></div>
+                <div class="cert-top">
+                    <div class="cert-icon-wrap pending-color">
+                        <i class="fas fa-hourglass-half"></i>
+                    </div>
+                    <div class="cert-coming-soon">
+                        <i class="fas fa-clock"></i> COMING SOON
+                    </div>
+                </div>
+                <h3>CompTIA Security+</h3>
+                <p class="cert-issuer">CompTIA</p>
+                <p class="cert-desc">Industry-standard certification validating baseline cybersecurity skills — threat management, cryptography, identity management, and network security.</p>
+                <div class="cert-footer">
+                    <span class="cert-date">In Progress</span>
+                    <span class="cert-link cert-pending-label">Uploading Once Completed</span>
+                </div>
+            </div>
+
+            <!-- Cert 7: CEH / SOC Analyst (Coming Soon) -->
+            <div class="cert-card cert-pending">
+                <div class="cert-glow"></div>
+                <div class="cert-top">
+                    <div class="cert-icon-wrap pending-color">
+                        <i class="fas fa-hourglass-half"></i>
+                    </div>
+                    <div class="cert-coming-soon">
+                        <i class="fas fa-clock"></i> COMING SOON
+                    </div>
+                </div>
+                <h3>CEH / SOC Analyst</h3>
+                <p class="cert-issuer">EC-Council / TryHackMe</p>
+                <p class="cert-desc">Certified Ethical Hacker or SOC Analyst path — advanced offensive and defensive security techniques, real-world threat detection and response scenarios.</p>
+                <div class="cert-footer">
+                    <span class="cert-date">In Progress</span>
+                    <span class="cert-link cert-pending-label">Uploading Once Completed</span>
+                </div>
+            </div>
+
         </div>
- 
+
         <div class="certs-roadmap">
             <h3><i class="fas fa-road"></i> Certification Roadmap</h3>
             <div class="roadmap-items">
@@ -750,9 +690,14 @@ Copy
                     <span>THM Cybersecurity 101</span>
                 </div>
                 <div class="roadmap-line done"></div>
+                <div class="roadmap-item done">
+                    <div class="roadmap-dot"></div>
+                    <span>Cryptography</span>
+                </div>
+                <div class="roadmap-line done"></div>
                 <div class="roadmap-item active">
                     <div class="roadmap-dot pulse"></div>
-                    <span>THM Jr Pentester</span>
+                    <span>THM SOC Analyst L1</span>
                 </div>
                 <div class="roadmap-line"></div>
                 <div class="roadmap-item future">
@@ -762,13 +707,26 @@ Copy
                 <div class="roadmap-line"></div>
                 <div class="roadmap-item future">
                     <div class="roadmap-dot"></div>
-                    <span>eJPT</span>
+                    <span>CEH / eJPT</span>
                 </div>
             </div>
         </div>
     </div>
 </section>
- 
+
+<!-- CERTIFICATE MODAL -->
+<div class="cert-modal" id="certModal" onclick="closeCertModal(event)">
+    <div class="cert-modal-inner">
+        <div class="cert-modal-header">
+            <span class="cert-modal-title" id="certModalTitle"></span>
+            <button class="cert-modal-close" onclick="closeCertModal()"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cert-modal-body">
+            <iframe id="certModalFrame" src="" title="Certificate Viewer"></iframe>
+        </div>
+    </div>
+</div>
+
 <!-- ==================== CONTACT ==================== -->
 <section id="contact" class="section">
     <div class="container">
@@ -776,7 +734,7 @@ Copy
             <span class="section-tag">> ssh ahad@connect.io</span>
             <h2 class="section-title">Get In Touch</h2>
         </div>
- 
+
         <div class="contact-layout">
             <div class="contact-info">
                 <p class="contact-intro">I'm always open to connecting with fellow security enthusiasts, mentors, and potential collaborators. Whether it's about CTFs, research, or internship opportunities — reach out.</p>
@@ -815,12 +773,8 @@ Copy
                         <span class="contact-arrow">→</span>
                     </a>
                 </div>
- 
-                <a href="assets/Resume.pdf" class="btn btn-primary resume-btn" download>
-                    <i class="fas fa-download"></i> Download Full Resume
-                </a>
             </div>
- 
+
             <div class="contact-terminal">
                 <div class="terminal-window">
                     <div class="terminal-bar">
@@ -849,7 +803,7 @@ Copy
         </div>
     </div>
 </section>
- 
+
 <!-- FOOTER -->
 <footer>
     <div class="footer-inner">
@@ -868,7 +822,7 @@ Copy
         <p class="footer-copy">© 2025 Ahad Shaikh · Built with curiosity and caffeine</p>
     </div>
 </footer>
- 
+
 <script src="script.js"></script>
 </body>
 </html>
