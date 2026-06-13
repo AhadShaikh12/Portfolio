@@ -6,6 +6,14 @@ A professional, hacker-themed cybersecurity portfolio built with HTML, CSS, and 
 
 ---
 
+## 🚀 What's New in This Version?
+- **CyberKit Project Integration**: An all-in-one OSINT toolkit utilizing APIs for username queries, password generation, and email analysis.
+- **SOC Analyst Certification (Verified)**: Promoted the THM SOC Analyst L1 certification to verified status and linked the interactive PDF viewer to the certificate.
+- **Updated Focus**: Changed focus areas from offensive/web pentesting to core Cybersecurity and Incident Response/SOC monitoring.
+- **Streamlined Assets**: Removed the resume download option for privacy and security.
+
+---
+
 ## 🔥 Features
 
 - **Matrix rain canvas background** — animated digital rain effect
@@ -17,29 +25,42 @@ A professional, hacker-themed cybersecurity portfolio built with HTML, CSS, and 
 - **Scroll-based animations** — smooth reveal on scroll
 - **Live TryHackMe badge** — auto-updates with room completions
 - **Animated skill bars** — triggered on scroll into view
-- **Certification roadmap** — visual learning journey
-- **Fully responsive** — mobile, tablet, and desktop
+- **Certification roadmap** — visual learning journey mapping SOC analyst skills, CompTIA Security+, and future targets
+- **Interactive PDF modal** — view certificates directly on the page without external redirection
+- **Fully responsive** — mobile, tablet, and desktop optimized
+
+---
 
 ## 📁 File Structure
 
-```
+```text
 portfolio/
 ├── index.html          # Main HTML structure
-├── style.css           # All styles & animations
-├── script.js           # Interactivity & effects
-├── README.md           # This file
+├── style.css           # Custom styles, transitions, and layout
+├── script.js           # Interactive components, Canvas rain, and modals
+├── .gitignore          # Excluded environment/confidential editor files
+├── README.md           # Project documentation
 └── assets/
-    └── Resume.pdf      # Downloadable resume
+    ├── Cryptography.pdf
+    ├── Cybersecurity 101.pdf
+    ├── Ethical Hacking with AI Training.pdf
+    ├── Networking.pdf
+    ├── Pre-Security.pdf
+    └── SOC Analyst.pdf # Verified SOC Analyst certificate PDF
 ```
+
+---
 
 ## 🛠️ Tech Stack
 
 - **HTML5** — semantic structure
-- **CSS3** — custom properties, Grid, Flexbox, animations
-- **Vanilla JavaScript** — canvas, IntersectionObserver, typed effect
+- **CSS3** — custom properties, CSS Grid, Flexbox, keyframe animations
+- **Vanilla JavaScript** — custom canvas drawing, Intersection Observer API, typed role simulation
 - **JetBrains Mono** — primary monospace font
 - **Rajdhani** — display/heading font
-- **Font Awesome 6** — icons
+- **Font Awesome 6** — iconography
+
+---
 
 ## 🚀 Sections
 
@@ -48,26 +69,37 @@ portfolio/
 | Hero | Name, role, quick stats, live terminal demo |
 | About | Bio, highlights, JSON-style profile card |
 | Skills | Security tools, programming, concept tags |
-| Projects | 6 cybersecurity projects with findings |
+| Projects | 3 cybersecurity projects (Traffic Violation System, CyberKit OSINT Tool, SOC Analyst Path) |
 | Labs | TryHackMe badge, home lab, study progress |
-| Certifications | 4 verified certs + roadmap |
-| Contact | All social links + terminal panel |
+| Certifications | 6 verified certs (including SOC Analyst) + CompTIA Security+ Roadmap |
+| Contact | Social links + terminal-style connection panel |
+
+---
 
 ## 📦 How to Deploy
 
 ### GitHub Pages
-1. Fork or clone this repo
-2. Place your `Resume.pdf` in `assets/`
-3. Go to **Settings → Pages → Deploy from branch (main)**
-4. Your portfolio will be live at `https://yourusername.github.io/repo-name`
+1. Fork or clone this repository:
+   ```bash
+   git clone https://github.com/AhadShaikh12/Portfolio.git
+   ```
+2. Place your certificates in the `assets/` folder
+3. Push to your main branch
+4. Go to **Settings → Pages → Deploy from branch (main)** on GitHub
+5. Your portfolio will be live at `https://yourusername.github.io/repo-name`
 
 ### Local Preview
+To run the project locally without file-origin policy issues when opening PDFs:
 ```bash
-# Just open index.html in a browser
-# Or use a local server (recommended):
-python3 -m http.server 8080
-# Then visit http://localhost:8080
+# Using Python
+python -m http.server 8080
+
+# Or using Node.js / NPM
+npx http-server -p 8080
 ```
+Then visit `http://localhost:8080` in your web browser.
+
+---
 
 ## 🔑 Customization
 
@@ -90,6 +122,8 @@ In `style.css`, edit the `:root` variables:
 }
 ```
 
+---
+
 ## 📬 Contact
 
 | Platform | Link |
@@ -101,4 +135,4 @@ In `style.css`, edit the `:root` variables:
 
 ---
 
-*Built by Ahad Shaikh · © 2025 · All rights reserved*
+*Built by Ahad Shaikh · © 2026 · All rights reserved*
